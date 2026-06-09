@@ -74,19 +74,39 @@ export async function POST(request) {
     Low: `${domain} barely registers in AI answers today. This is greenfield: the fundamentals plus a cited Reddit presence are the quickest wins.`,
   }[grade];
 
-  // ---------------------------------------------------------------------------
-  // TODO (deploy): persist this submission to the SAME store the live
-  // reddireach.com already uses for visibility-check leads (database / Supabase /
-  // sheet / CRM — see CLAUDE.md "Visibility checker: save submissions"). Keep it
-  // best-effort so a storage failure never breaks the score response. Example:
-  //
-  //   try {
-  //     await saveSubmission({
-  //       url: raw, domain, score: overall, grade,
-  //       submittedAt: new Date().toISOString(),
-  //     });
-  //   } catch (e) { /* do not block the response */ }
-  // ---------------------------------------------------------------------------
+  // Persist to Sanity (same "lead" store as the live site). Best-effort: a write
+  // failure never blocks the score response.
+  try {
+    const writeToken = process.env.SANITY_API_WRITE_TOKEN;
+    if (writeToken) {
+      const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'vj3ex5iz';
+      const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production';
+      const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2024-01-01';
+      await fetch(
+        `https://${projectId}.api.sanity.io/v${apiVersion}/data/mutate/${dataset}`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${writeToken}`,
+          },
+          body: JSON.stringify({
+            mutations: [{
+              create: {
+                _type: 'lead',
+                website: raw,
+                domain,
+                score: overall,
+                grade,
+                convertedToCall: false,
+                submittedAt: new Date().toISOString(),
+              },
+            }],
+          }),
+        }
+      );
+    }
+  } catch (e) { /* do not block the response */ }
 
   return NextResponse.json({
     domain,
