@@ -7,6 +7,7 @@ const upvote = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stro
 
 export default function SearchShift() {
   useEffect(() => {
+    const intervals = [];
     function initShiftRotate() {
       try {
         const cards = document.querySelectorAll('.shift-rotate');
@@ -18,17 +19,19 @@ export default function SearchShift() {
           let i = 0;
           frames.forEach((f, idx) => f.classList.toggle('is-active', idx === 0));
           if (reduce || frames.length < 2) return;
-          setInterval(() => {
+          const id = setInterval(() => {
             frames[i].classList.remove('is-active');
             i = (i + 1) % frames.length;
             frames[i].classList.add('is-active');
           }, 2500);
+          intervals.push(id);
         });
       } catch (err) {
         console.error('SearchShift rotate init failed:', err);
       }
     }
     initShiftRotate();
+    return () => { intervals.forEach(clearInterval); };
   }, []);
 
   return (

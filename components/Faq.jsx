@@ -14,31 +14,32 @@ const faqs = [
 
 export default function Faq() {
   useEffect(() => {
-    function initFaq() {
-      try {
-        const list = document.getElementById('faqList');
-        if (!list) return;
-        const qs = list.querySelectorAll('.faq-q');
-        qs.forEach((q) => {
-          q.addEventListener('click', () => {
-            const open = q.getAttribute('aria-expanded') === 'true';
-            qs.forEach((other) => {
-              other.setAttribute('aria-expanded', 'false');
-              const a = other.parentElement && other.parentElement.querySelector('.faq-a');
-              if (a) a.style.maxHeight = '';
-            });
-            if (!open) {
-              q.setAttribute('aria-expanded', 'true');
-              const ans = q.parentElement && q.parentElement.querySelector('.faq-a');
-              if (ans) ans.style.maxHeight = ans.scrollHeight + 'px';
-            }
+    const cleanups = [];
+    try {
+      const list = document.getElementById('faqList');
+      if (!list) return;
+      const qs = list.querySelectorAll('.faq-q');
+      qs.forEach((q) => {
+        const onClick = () => {
+          const open = q.getAttribute('aria-expanded') === 'true';
+          qs.forEach((other) => {
+            other.setAttribute('aria-expanded', 'false');
+            const a = other.parentElement && other.parentElement.querySelector('.faq-a');
+            if (a) a.style.maxHeight = '';
           });
-        });
-      } catch (err) {
-        console.error('FAQ init failed:', err);
-      }
+          if (!open) {
+            q.setAttribute('aria-expanded', 'true');
+            const ans = q.parentElement && q.parentElement.querySelector('.faq-a');
+            if (ans) ans.style.maxHeight = ans.scrollHeight + 'px';
+          }
+        };
+        q.addEventListener('click', onClick);
+        cleanups.push(() => q.removeEventListener('click', onClick));
+      });
+    } catch (err) {
+      console.error('FAQ init failed:', err);
     }
-    initFaq();
+    return () => { cleanups.forEach((fn) => fn()); };
   }, []);
 
   return (

@@ -8,6 +8,12 @@ const comment = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" str
 
 export default function HeroShowcase({ inline = false }) {
   useEffect(() => {
+    // Guards so the infinite animation loop can be stopped on cleanup. Without
+    // this, React Strict Mode (dev) double-invokes the effect and two loops type
+    // into the same DOM nodes at once, garbling the AI-answer text.
+    let cancelled = false;
+    let timer = null;
+
     function initHeroShowcase() {
       try {
         const root = document.getElementById('heroShowcase');
@@ -51,7 +57,7 @@ export default function HeroShowcase({ inline = false }) {
         ];
 
         const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+        const sleep = (ms) => new Promise((r) => { timer = setTimeout(r, ms); });
 
         function showScene(name) {
           Object.keys(scenes).forEach((k) => scenes[k].classList.toggle('is-active', k === name));
@@ -69,6 +75,7 @@ export default function HeroShowcase({ inline = false }) {
           queryEl.textContent = '';
           queryEl.classList.remove('done');
           for (let i = 0; i < QUERY.length; i++) {
+            if (cancelled) return;
             queryEl.textContent += QUERY[i];
             await sleep(reduce ? 0 : 26);
           }
@@ -78,6 +85,7 @@ export default function HeroShowcase({ inline = false }) {
         async function typeAnswer() {
           answerEl.innerHTML = '';
           for (const seg of ANSWER) {
+            if (cancelled) return;
             let node;
             if (seg.cls) {
               node = document.createElement('span');
@@ -88,6 +96,7 @@ export default function HeroShowcase({ inline = false }) {
               answerEl.appendChild(node);
             }
             for (let i = 0; i < seg.t.length; i++) {
+              if (cancelled) return;
               node.textContent += seg.t[i];
               if (!reduce && seg.t[i] !== ' ' && seg.t[i] !== '\n') await sleep(9);
             }
@@ -117,28 +126,28 @@ export default function HeroShowcase({ inline = false }) {
         async function loop() {
           let modelIdx = 0;
           await sleep(400);
-          while (true) {
+          while (!cancelled) {
             resetReddit();
             showScene('reddit');
-            await sleep(900);
+            await sleep(900); if (cancelled) return;
             comments[0] && comments[0].classList.add('show');
-            await sleep(1100);
+            await sleep(1100); if (cancelled) return;
             comments[1] && comments[1].classList.add('show');
-            await sleep(700);
+            await sleep(700); if (cancelled) return;
             badge && badge.classList.add('show');
-            await sleep(2600);
+            await sleep(2600); if (cancelled) return;
 
             resetAi();
             setModel(modelIdx);
             showScene('ai');
-            await sleep(650);
-            await typeQuery();
-            await sleep(450);
+            await sleep(650); if (cancelled) return;
+            await typeQuery(); if (cancelled) return;
+            await sleep(450); if (cancelled) return;
             if (answerWrap) answerWrap.classList.add('show');
-            await typeAnswer();
-            await sleep(350);
+            await typeAnswer(); if (cancelled) return;
+            await sleep(350); if (cancelled) return;
             if (sourcesEl) sourcesEl.classList.add('show');
-            await sleep(3000);
+            await sleep(3000); if (cancelled) return;
 
             modelIdx = (modelIdx + 1) % models.length;
           }
@@ -150,6 +159,11 @@ export default function HeroShowcase({ inline = false }) {
       }
     }
     initHeroShowcase();
+
+    return () => {
+      cancelled = true;
+      if (timer) clearTimeout(timer);
+    };
   }, []);
 
   const scClass = ['sc', inline ? 'sc-inline' : ''].filter(Boolean).join(' ');

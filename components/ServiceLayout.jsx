@@ -4,6 +4,7 @@ import HeroShowcase from '@/components/HeroShowcase';
 import Tools from '@/components/Tools';
 import Fav from '@/components/Fav';
 import FaqAccordion from '@/components/FaqAccordion';
+import HeroChecker from '@/components/HeroChecker';
 
 const CAL = 'https://calendly.com/kirkco/chat';
 const s2 = (d) => `https://www.google.com/s2/favicons?domain=${d}&sz=64`;
@@ -173,6 +174,13 @@ export default function ServiceLayout(props) {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Check your AI visibility */}
+        <section className="sect dots">
+          <div className="pad checker-band">
+            <HeroChecker />
           </div>
         </section>
 

@@ -4,31 +4,29 @@ import { useEffect } from 'react';
 
 export default function Nav() {
   useEffect(() => {
-    function initNavDropdown() {
-      try {
-        const dd = document.getElementById('svcDd');
-        if (!dd) return;
-        const btn = dd.querySelector('.nav-dd-btn');
-        if (!btn) return;
-        function close() {
-          dd.removeAttribute('data-open');
-          btn.setAttribute('aria-expanded', 'false');
-        }
-        function open() {
-          dd.setAttribute('data-open', '');
-          btn.setAttribute('aria-expanded', 'true');
-        }
-        btn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          if (dd.hasAttribute('data-open')) close(); else open();
-        });
-        document.addEventListener('click', (e) => { if (!dd.contains(e.target)) close(); });
-        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
-      } catch (err) {
-        console.error('Nav dropdown init failed:', err);
-      }
+    let cleanup = () => {};
+    try {
+      const dd = document.getElementById('svcDd');
+      if (!dd) return;
+      const btn = dd.querySelector('.nav-dd-btn');
+      if (!btn) return;
+      const close = () => { dd.removeAttribute('data-open'); btn.setAttribute('aria-expanded', 'false'); };
+      const open = () => { dd.setAttribute('data-open', ''); btn.setAttribute('aria-expanded', 'true'); };
+      const onBtn = (e) => { e.stopPropagation(); if (dd.hasAttribute('data-open')) close(); else open(); };
+      const onDoc = (e) => { if (!dd.contains(e.target)) close(); };
+      const onKey = (e) => { if (e.key === 'Escape') close(); };
+      btn.addEventListener('click', onBtn);
+      document.addEventListener('click', onDoc);
+      document.addEventListener('keydown', onKey);
+      cleanup = () => {
+        btn.removeEventListener('click', onBtn);
+        document.removeEventListener('click', onDoc);
+        document.removeEventListener('keydown', onKey);
+      };
+    } catch (err) {
+      console.error('Nav dropdown init failed:', err);
     }
-    initNavDropdown();
+    return () => cleanup();
   }, []);
 
   return (

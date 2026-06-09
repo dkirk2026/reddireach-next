@@ -13,15 +13,15 @@ const PROPOSALS = 'https://filipelinsduarte.github.io/proposals';
 
 const team = [
   {
-    name: 'Filipe Lins Duarte',
-    role: 'Co-Founder & CEO',
-    img: `${PROPOSALS}/filipe.jpeg`,
-    linkedin: 'https://www.linkedin.com/in/filipelinsduarte',
-    bio: 'Leads go-to-market strategy and client relationships, drawing on years building SaaS revenue teams across Europe and the US.',
+    name: 'Danny Kirk',
+    role: 'COO & Advisory',
+    img: `${PROPOSALS}/danny-kirk.jpeg`,
+    linkedin: 'https://www.linkedin.com/in/danielpkirk/',
+    bio: 'Leads Reddit and community strategy, living in the subreddits and making sure every post lands naturally, never as spam.',
     history: [
-      { domain: 'aipeekaboo.com', name: 'AI Peekaboo', role: 'Co-Founder & CEO' },
-      { domain: 'uber.com', name: 'Uber for Business', role: 'Mid-Market AE' },
-      { domain: 'meistertask.com', name: 'Meister', role: '#1 AE 2023' },
+      { domain: 'reddit.com', name: 'ReddiReach', role: 'Founder' },
+      { domain: 'goaheadventures.com', name: 'GoAhead Ventures', role: 'Venture Scout' },
+      { domain: 'energentmedia.com', name: 'Energent Media', role: 'COO' },
     ],
   },
   {
@@ -37,15 +37,15 @@ const team = [
     ],
   },
   {
-    name: 'Danny Kirk',
-    role: 'COO & Advisory',
-    img: `${PROPOSALS}/danny-kirk.jpeg`,
-    linkedin: 'https://www.linkedin.com/in/danielpkirk/',
-    bio: 'Leads Reddit and community strategy, living in the subreddits and making sure every post lands naturally, never as spam.',
+    name: 'Filipe Lins Duarte',
+    role: 'Co-Founder & CEO',
+    img: `${PROPOSALS}/filipe.jpeg`,
+    linkedin: 'https://www.linkedin.com/in/filipelinsduarte',
+    bio: 'Leads go-to-market strategy and client relationships, drawing on years building SaaS revenue teams across Europe and the US.',
     history: [
-      { domain: 'reddit.com', name: 'ReddiReach', role: 'Founder' },
-      { domain: 'goaheadventures.com', name: 'GoAhead Ventures', role: 'Venture Scout' },
-      { domain: 'energentmedia.com', name: 'Energent Media', role: 'COO' },
+      { domain: 'aipeekaboo.com', name: 'AI Peekaboo', role: 'Co-Founder & CEO' },
+      { domain: 'uber.com', name: 'Uber for Business', role: 'Mid-Market AE' },
+      { domain: 'meistertask.com', name: 'Meister', role: '#1 AE 2023' },
     ],
   },
 ];
