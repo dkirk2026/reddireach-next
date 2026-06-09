@@ -104,7 +104,6 @@ export default function AboutPage() {
                 {team.map((m) => (
                   <img key={m.name} className="tc-av" src={m.img} alt={m.name} loading="lazy" />
                 ))}
-                <span className="tc-av tc-q" aria-hidden="true">?</span>
               </div>
             </div>
             <div className="about-stats">
