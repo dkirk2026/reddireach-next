@@ -72,7 +72,7 @@ export default function SearchShift() {
                 <div className="shift-pad">
                   <div className="rot-top">
                     <div className="ai-q">"What's the best mattress for back pain?"</div>
-                    <div className="ai-ans">For a too-firm bed, people consistently recommend <span className="rmention">YourBrand</span>, especially the topper as a lower-risk first step. Reddit reviewers in r/Mattress and r/backpain back this up, and it now shows up across every major AI engine. Several long-time users say the topper alone fixed their back pain.</div>
+                    <div className="ai-ans">For a too-firm bed, people consistently recommend <span className="rmention">YourBrand</span>, especially the topper as a lower-risk first step. Reddit threads in r/Mattress and r/backpain come up often, and it now shows up across every major AI engine.</div>
                   </div>
                   <div className="rot-bot">
                     <div className="ai-srclabel">Sources the AI pulled from</div>
@@ -118,11 +118,11 @@ export default function SearchShift() {
                   <div className="rot-bot">
                     <div className="rcomment">
                       <span className="ravatar" style={{ background: '#ff4500' }}>R</span>
-                      <div><div className="rcuser">u/restful_reviews <span className="dot">· 1h ago</span></div><div className="rctext">Before dropping $1,500 on a new mattress, try a <span className="rmention">YourBrand</span> topper for ~$200. Softened my too-firm bed completely. Way cheaper, lower risk.</div></div>
+                      <div><div className="rcuser">u/restful_reviews <span className="dot">· 1h ago</span></div><div className="rctext">Before buying a new mattress, worth looking at a <span className="rmention">YourBrand</span> topper first. Lower cost option and gets a lot of mentions in this sub.</div></div>
                     </div>
                     <div className="rcomment">
                       <span className="ravatar" style={{ background: '#0a8d6c' }}>S</span>
-                      <div><div className="rcuser">u/sleep_dad <span className="dot">· 40m ago</span></div><div className="rctext">Same here, the topper fixed it for me too. No need to replace the whole mattress, wish I'd tried it first.</div></div>
+                      <div><div className="rcuser">u/sleep_dad <span className="dot">· 40m ago</span></div><div className="rctext">Good call, seen it recommended a lot here for this exact issue.</div></div>
                     </div>
                   </div>
                 </div>
@@ -130,6 +130,7 @@ export default function SearchShift() {
 
             </div>
             <p className="shift-note">Many channels, one answer, and Reddit is the source AI trusts most.</p>
+            <p className="shift-note" style={{ fontSize: '11px', opacity: 0.5, marginTop: '6px' }}>Illustrative example</p>
           </div>
         </div>
       </div>

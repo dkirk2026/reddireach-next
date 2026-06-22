@@ -26,7 +26,7 @@ const cards = [
     body: 'Keep hearing AI pulls from Reddit now. Anyone seen real results from showing up here, or is it a waste of time?',
     up: 503, comments: 176,
     avatar: 'D', avatarBg: '#3b82f6', user: 'u/dtc_dana', userWhen: '· 5h ago',
-    commentText: '100%. Half our "where did you hear about us" answers now say Reddit or ChatGPT. Being in the conversation is what got us cited in the AI answers.',
+    commentText: 'Reddit shows up more and more in our customer surveys. Being active in the right threads is what gets you into the AI answers too.',
   },
 ];
 
@@ -41,6 +41,7 @@ export default function Conversations() {
         </div>
       </div>
       <div className="pad" style={{ paddingTop: '0' }}>
+        <p style={{ fontSize: '11px', opacity: 0.45, marginBottom: '12px' }}>Illustrative examples</p>
         <div className="rcards">
           {cards.map((c, idx) => (
             <div className="rcard" key={idx}>

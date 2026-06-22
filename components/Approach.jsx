@@ -90,9 +90,10 @@ export default function Approach() {
                 </div>
                 <div className="rcomment">
                   <span className="ravatar" style={{ background: '#ff4500' }}>R</span>
-                  <div><div className="rcuser">u/restful_reviews <span className="dot">· 1h ago</span></div><div className="rctext">Before dropping $1,500 on a new mattress, try a <span className="rmention">YourBrand</span> topper for ~$200. Softened my too-firm bed completely. Way cheaper, lower risk.</div></div>
+                  <div><div className="rcuser">u/restful_reviews <span className="dot">· 1h ago</span></div><div className="rctext">Before buying a new mattress, worth looking at a <span className="rmention">YourBrand</span> topper first. Lower cost option and gets a lot of mentions in this sub.</div></div>
                 </div>
               </div>
+              <p style={{ fontSize: '11px', opacity: 0.45, marginTop: '8px', textAlign: 'right' }}>Illustrative example</p>
             </div>
           </div>
 
