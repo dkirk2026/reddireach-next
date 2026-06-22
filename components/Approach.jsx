@@ -74,12 +74,12 @@ export default function Approach() {
             </div>
           </div>
 
-          {/* 04 Organic, human-written engagement */}
+          {/* 04 Expert-led engagement */}
           <div className="rsrch-item rev">
             <div className="rsrch-copy">
               <div className="rnum">04</div>
-              <h3>Organic, human-written engagement</h3>
-              <p>Real Reddit natives write every comment and post, positioning your brand naturally where it actually fits the conversation. No bots, no spam, ever. Trust is the entire strategy, and it is what both Reddit and the AI models reward.</p>
+              <h3>Expert-led engagement</h3>
+              <p>Our team writes every comment and post, positioning your brand naturally where it actually fits the conversation. No bots, no spam, ever. Trust is the entire strategy, and it is what both Reddit and the AI models reward.</p>
             </div>
             <div className="rsrch-vis">
               <div className="rcard rsrch-card">

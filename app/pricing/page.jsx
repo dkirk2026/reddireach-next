@@ -64,7 +64,7 @@ const plans = [
 ];
 
 const includes = [
-  { title: '100% human engagement', body: 'Real Reddit natives write every comment and post. No bots, no spam, ever.' },
+  { title: 'Expert-led engagement', body: 'Our team writes every comment and post. No bots, no spam, ever.' },
   { title: 'A senior team on every account', body: 'The people who plan your strategy do the work. No junior hand-offs.' },
   { title: 'AI citation tracking', body: 'We monitor your mentions across ChatGPT, Perplexity, Gemini and Google AI.' },
   { title: 'Transparent monthly reporting', body: 'Clear reporting on reach, engagement and the AI recommendations you are winning.' },

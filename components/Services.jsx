@@ -14,7 +14,7 @@ export default function Services() {
         <div className="cell">
           <div className="ico"><Fav domain="reddit.com" /></div>
           <h3>Reddit Marketing</h3>
-          <p>Get your brand mentioned in the communities and sources that AI models pull from. Authentic, organic engagement run by genuine Reddit natives.</p>
+          <p>Get your brand mentioned in the communities and sources that AI models pull from. Strategic, expert-led engagement in the communities and sources that shape AI recommendations.</p>
         </div>
         <div className="cell">
           <div className="ico">
