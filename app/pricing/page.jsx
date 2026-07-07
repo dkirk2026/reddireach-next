@@ -5,7 +5,7 @@ import FaqAccordion from '@/components/FaqAccordion';
 export const metadata = {
   title: 'Pricing · Reddit Marketing & AI Search Optimization (GEO) · ReddiReach',
   description:
-    'Simple, transparent pricing for Reddit marketing and Generative Engine Optimization (GEO). Plans from $1,500/month to get your brand recommended by ChatGPT, Perplexity, Gemini and Google AI.',
+    'Simple, transparent pricing for Reddit marketing and Generative Engine Optimization (GEO). Plans from $1,600/month to get your brand recommended by ChatGPT, Perplexity, Gemini and Google AI.',
 };
 
 const CAL = 'https://calendly.com/kirkco/chat';
@@ -24,7 +24,7 @@ const B = {
 
 const plans = [
   {
-    name: 'Reddit Growth', price: '$1,500', period: '/month', featured: false,
+    name: 'Reddit Growth', price: '$1,600', period: '/month', featured: false,
     desc: 'Perfect for businesses wanting to scale with Reddit marketing.',
     cta: 'Get started', href: CAL,
     features: [
@@ -35,7 +35,7 @@ const plans = [
     ],
   },
   {
-    name: 'AI Search Optimization', price: '$4,000', period: '/month', featured: true, badge: 'Most popular',
+    name: 'AI Search Optimization', price: '$5,000', period: '/month', featured: true, badge: 'Most popular',
     desc: 'Perfect for businesses that want to show up in AI search results.',
     cta: 'Start growing', href: CAL,
     features: [
