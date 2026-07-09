@@ -7,9 +7,9 @@ const nextConfig = {
       { source: '/geo', destination: '/services/geo', permanent: true },
       // Deprecated route from previous site
       { source: '/ai-cold-email', destination: '/', permanent: true },
-      // Sanity Studio — redirect to manage.sanity.io which always works regardless of domain
-      { source: '/studio', destination: 'https://manage.sanity.io', permanent: false },
-      { source: '/studio/:path*', destination: 'https://manage.sanity.io', permanent: false },
+      // Sanity Studio — redirect to hosted studio
+      { source: '/studio', destination: 'https://sanity.io/@oZKuKY4Mp/studio/rvb6qrz8dhyv45xiryws587b/default', permanent: false },
+      { source: '/studio/:path*', destination: 'https://sanity.io/@oZKuKY4Mp/studio/rvb6qrz8dhyv45xiryws587b/default', permanent: false },
     ];
   },
 };
