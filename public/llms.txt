@@ -1,0 +1,41 @@
+# ReddiReach
+
+> ReddiReach is a Reddit marketing and Generative Engine Optimization (GEO) agency. We get brands cited and recommended by ChatGPT, Perplexity, Gemini, and Google AI Overviews through authentic Reddit marketing and AI-optimized content.
+
+Reddit is one of the primary sources AI models reference when answering product and service questions. ReddiReach builds genuine Reddit presence for brands so that when someone asks an AI assistant for a recommendation in your category, your brand is the answer.
+
+## Services
+
+- [GEO / AI Search Optimization](https://www.reddireach.com/services/geo): Generative Engine Optimization to get your brand cited and recommended by ChatGPT, Perplexity, Gemini, and Google AI. Includes AI visibility audit, answer-ready content, schema and structured data, and AI citation tracking.
+- [Reddit Marketing](https://www.reddireach.com/services/reddit): Authentic Reddit engagement across targeted subreddits. Expert-written comments and posts, thread monitoring, competitor mention-share tracking, and monthly reporting.
+- [Technical SEO](https://www.reddireach.com/services/seo): Schema markup, metadata optimization, site structure, and technical SEO improvements that help both search engines and AI systems understand and cite your content.
+- [Link Building](https://www.reddireach.com/services/link-building): High-authority, relevant link acquisition to strengthen your domain and increase the likelihood of AI systems sourcing your content.
+
+## Pricing
+
+- Reddit Growth: $1,600/month — 20 targeted Reddit comments/month in niche subreddits, thread monitoring, mention-share tracking versus competitors, and monthly AI citation reporting.
+- AI Search Optimization: $5,000/month — 12 articles/month targeting high-intent queries, technical SEO across all pages, AI visibility tracking across ChatGPT, Gemini, Perplexity and Google AI Mode, link building, and weekly strategy calls.
+- Custom: Contact for enterprise-scale programs.
+
+All plans require a 3-month minimum commitment. No setup fees.
+
+## Blog
+
+The ReddiReach blog covers Reddit marketing tactics, GEO strategy, and AI search optimization playbooks: https://www.reddireach.com/blog
+
+## Free Tools
+
+- [AI Visibility Checker](https://www.reddireach.com/#visibility): Enter any website URL and get an instant AI-visibility score across Reddit, ChatGPT, Perplexity, and Google AI.
+- [GEO Checklist](https://www.reddireach.com/checklist): Step-by-step checklist to get your brand recommended by AI search engines.
+
+## Key Facts
+
+- Website: https://www.reddireach.com
+- Book a call: https://calendly.com/kirkco/chat
+- Approach: Expert-led, human engagement only — no bots, no spam
+- AI platforms tracked: ChatGPT, Perplexity, Gemini, Google AI Overviews, Google AI Mode
+- Results timeline: Reddit engagement visible in 4-8 weeks; AI citation gains in 3-6 months
+
+## Full Reference
+
+https://www.reddireach.com/llms-full.txt

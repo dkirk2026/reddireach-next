@@ -1,3 +1,16 @@
+export const metadata = {
+  title: 'ReddiReach · Get AI to recommend your brand',
+  description:
+    'ReddiReach is the leading Reddit marketing and AI search optimization (GEO) agency. We get your brand cited and recommended by ChatGPT, Perplexity, Gemini and Google AI Overviews through authentic Reddit marketing.',
+  alternates: { canonical: 'https://www.reddireach.com' },
+  openGraph: {
+    type: 'website',
+    url: 'https://www.reddireach.com',
+    title: 'ReddiReach · Get AI to recommend your brand',
+    description: 'The leading Reddit marketing and GEO agency. Get your brand recommended by ChatGPT, Perplexity, Gemini and Google AI.',
+  },
+};
+
 import Nav from '@/components/Nav';
 import HeroSplit from '@/components/HeroSplit';
 import Logos from '@/components/Logos';

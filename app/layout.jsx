@@ -13,12 +13,15 @@ export const metadata = {
   description:
     'ReddiReach is the leading Reddit marketing and AI search optimization (GEO) agency. We get your brand cited and recommended by ChatGPT, Perplexity, Gemini and Google AI Overviews through authentic Reddit marketing.',
   icons: { icon: `${SITE}/icon.png` },
+  alternates: { canonical: SITE },
   openGraph: {
     type: 'website',
     siteName: 'ReddiReach',
-    images: [`${SITE}/icon.png`],
+    url: SITE,
+    images: [{ url: `${SITE}/icon.png`, width: 512, height: 512 }],
   },
   twitter: { card: 'summary_large_image', images: [`${SITE}/icon.png`] },
+  robots: { index: true, follow: true },
 };
 
 const orgSchema = {

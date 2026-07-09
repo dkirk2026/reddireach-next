@@ -96,16 +96,50 @@ const faqSchema = {
   })),
 };
 
+const offerSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'ReddiReach Pricing Plans',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      item: {
+        '@type': 'Offer',
+        name: 'Reddit Growth',
+        description: 'Authentic Reddit marketing with 20 targeted comments/month, thread monitoring, and AI citation reporting.',
+        price: '1600',
+        priceCurrency: 'USD',
+        priceSpecification: { '@type': 'UnitPriceSpecification', price: '1600', priceCurrency: 'USD', unitText: 'MONTH' },
+        seller: { '@type': 'Organization', name: 'ReddiReach' },
+        url: 'https://www.reddireach.com/pricing',
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      item: {
+        '@type': 'Offer',
+        name: 'AI Search Optimization',
+        description: '12 articles/month, technical SEO, AI visibility tracking across ChatGPT, Gemini, Perplexity and Google AI, link building, and weekly strategy calls.',
+        price: '5000',
+        priceCurrency: 'USD',
+        priceSpecification: { '@type': 'UnitPriceSpecification', price: '5000', priceCurrency: 'USD', unitText: 'MONTH' },
+        seller: { '@type': 'Organization', name: 'ReddiReach' },
+        url: 'https://www.reddireach.com/pricing',
+      },
+    },
+  ],
+};
+
 const check = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>`;
 
 export default function PricingPage() {
   return (
     <>
       <Nav />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }} />
       <div className="frame">
 
         {/* Hero */}

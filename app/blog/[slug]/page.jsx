@@ -53,9 +53,21 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const post = await sanityFetch(SINGLE_POST_QUERY, { slug: params.slug });
+  const url = `https://www.reddireach.com/blog/${params.slug}`;
+  const ogImage = post?.img ? `${post.img}?w=1200&h=630&fit=crop&auto=format` : 'https://www.reddireach.com/icon.png';
   return {
     title: post ? `${post.title} · ReddiReach Blog` : 'ReddiReach Blog',
     description: post?.excerpt || '',
+    alternates: { canonical: url },
+    openGraph: {
+      type: 'article',
+      url,
+      title: post?.title,
+      description: post?.excerpt || '',
+      images: [{ url: ogImage, width: 1200, height: 630 }],
+      publishedTime: post?.publishedAt,
+    },
+    twitter: { card: 'summary_large_image', images: [ogImage] },
   };
 }
 
@@ -77,15 +89,19 @@ export default async function BlogPost({ params }) {
     );
   }
 
+  const postUrl = `https://www.reddireach.com/blog/${params.slug}`;
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
+    mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
+    url: postUrl,
     headline: post.title,
     description: post.excerpt,
     datePublished: post.publishedAt,
-    image: post.img,
+    dateModified: post.publishedAt,
+    image: post.img ? `${post.img}?w=1200&h=630&fit=crop&auto=format` : undefined,
     author: post.author ? { '@type': 'Person', name: post.author } : undefined,
-    publisher: { '@type': 'Organization', name: 'ReddiReach' },
+    publisher: { '@type': 'Organization', name: 'ReddiReach', logo: { '@type': 'ImageObject', url: 'https://www.reddireach.com/icon.png' } },
   };
 
   return (
