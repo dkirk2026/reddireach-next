@@ -1,3 +1,6 @@
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
@@ -7,10 +10,13 @@ const nextConfig = {
       { source: '/geo', destination: '/services/geo', permanent: true },
       // Deprecated route from previous site
       { source: '/ai-cold-email', destination: '/', permanent: true },
-      // Sanity Studio — redirect to hosted studio structure view (leads + blog tabs)
-      { source: '/studio', destination: 'https://sanity.io/@oZKuKY4Mp/studio/rvb6qrz8dhyv45xiryws587b/structure', permanent: false },
-      { source: '/studio/:path*', destination: 'https://sanity.io/@oZKuKY4Mp/studio/rvb6qrz8dhyv45xiryws587b/structure', permanent: false },
     ];
+  },
+  webpack(config) {
+    // Polyfill react/compiler-runtime for React 18 so Sanity Studio (which uses
+    // React Compiler) builds without requiring React 19.
+    config.resolve.alias['react/compiler-runtime'] = require.resolve('react-compiler-runtime');
+    return config;
   },
 };
 
