@@ -7,9 +7,9 @@ const nextConfig = {
       { source: '/geo', destination: '/services/geo', permanent: true },
       // Deprecated route from previous site
       { source: '/ai-cold-email', destination: '/', permanent: true },
-      // Sanity Studio — redirect to hosted studio
-      { source: '/studio', destination: 'https://sanity.io/@oZKuKY4Mp/studio/rvb6qrz8dhyv45xiryws587b/default', permanent: false },
-      { source: '/studio/:path*', destination: 'https://sanity.io/@oZKuKY4Mp/studio/rvb6qrz8dhyv45xiryws587b/default', permanent: false },
+      // Sanity Studio — redirect to hosted studio structure view (leads + blog tabs)
+      { source: '/studio', destination: 'https://sanity.io/@oZKuKY4Mp/studio/rvb6qrz8dhyv45xiryws587b/structure', permanent: false },
+      { source: '/studio/:path*', destination: 'https://sanity.io/@oZKuKY4Mp/studio/rvb6qrz8dhyv45xiryws587b/structure', permanent: false },
     ];
   },
 };
