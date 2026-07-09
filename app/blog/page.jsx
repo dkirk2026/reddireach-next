@@ -11,11 +11,12 @@ export const metadata = {
 };
 
 export default async function BlogIndex() {
-  const posts = await sanityFetch(`*[_type == "post" && defined(slug.current)] | order(publishedAt desc){
+  const posts = await sanityFetch(`*[_type == "post" && defined(slug.current)] | order(coalesce(publishedAt, _createdAt) desc){
   title,
   "slug": slug.current,
   excerpt,
   publishedAt,
+  _createdAt,
   "img": mainImage.asset->url,
   "author": author->name,
   "cat": categories[0]->title
