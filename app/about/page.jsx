@@ -7,6 +7,7 @@ export const metadata = {
   title: 'About ReddiReach · The Reddit marketing and AI search team',
   description:
     'Meet the ReddiReach team. For 8+ years we have helped brands, startups and enterprises get recommended by AI through authentic Reddit marketing and AI search optimization.',
+  alternates: { canonical: '/about' },
 };
 
 const PROPOSALS = 'https://filipelinsduarte.github.io/proposals';

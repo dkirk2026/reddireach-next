@@ -6,6 +6,7 @@ export const metadata = {
   title: 'Pricing · Reddit Marketing & AI Search Optimization (GEO) · ReddiReach',
   description:
     'Simple, transparent pricing for Reddit marketing and Generative Engine Optimization (GEO). Plans from $1,600/month to get your brand recommended by ChatGPT, Perplexity, Gemini and Google AI.',
+  alternates: { canonical: '/pricing' },
 };
 
 const CAL = 'https://calendly.com/kirkco/chat';

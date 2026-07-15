@@ -3,6 +3,7 @@ import Legal from '@/components/Legal';
 export const metadata = {
   title: 'Privacy Policy · ReddiReach',
   description: 'How ReddiReach (Kirk & Co., LLC) collects, uses, discloses and safeguards your information.',
+  alternates: { canonical: '/privacy' },
 };
 
 export default function Page() {

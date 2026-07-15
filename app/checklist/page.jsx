@@ -8,6 +8,7 @@ import { sections, totalSteps } from '@/data/checklist';
 export const metadata = {
   title: `GEO Checklist · ${totalSteps} steps to get recommended by AI search`,
   description: `Free ${totalSteps}-step GEO (Generative Engine Optimization) checklist to get your brand recommended by ChatGPT, Perplexity, Gemini and Google AI: crawler access, schema, content, Reddit presence and tracking.`,
+  alternates: { canonical: '/checklist' },
 };
 
 const howToSchema = {

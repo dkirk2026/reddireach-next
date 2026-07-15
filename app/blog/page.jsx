@@ -8,6 +8,7 @@ export const metadata = {
   title: 'Blog · Reddit Marketing & AI Search · ReddiReach',
   description:
     'Playbooks and insights on Reddit marketing, Generative Engine Optimization (GEO), SEO and getting your brand recommended by ChatGPT, Perplexity and Google AI.',
+  alternates: { canonical: '/blog' },
 };
 
 export default async function BlogIndex() {

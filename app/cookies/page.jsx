@@ -3,6 +3,7 @@ import Legal from '@/components/Legal';
 export const metadata = {
   title: 'Cookie Policy · ReddiReach',
   description: 'How ReddiReach (Kirk & Co., LLC) uses cookies and how you can control them.',
+  alternates: { canonical: '/cookies' },
 };
 
 export default function Page() {

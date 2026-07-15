@@ -3,6 +3,7 @@ import Legal from '@/components/Legal';
 export const metadata = {
   title: 'Terms of Service · ReddiReach',
   description: 'The terms that govern your use of ReddiReach (Kirk & Co., LLC) services.',
+  alternates: { canonical: '/terms' },
 };
 
 export default function Page() {

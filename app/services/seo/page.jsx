@@ -4,6 +4,7 @@ import { seo } from '@/data/services';
 export const metadata = {
   title: seo.meta.title,
   description: seo.meta.description,
+  alternates: { canonical: '/services/seo' },
 };
 
 export default function Page() {
