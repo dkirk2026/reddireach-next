@@ -29,8 +29,4 @@ export default defineConfig({
   document: {
     actions: resolveDocumentActions,
   },
-  // Enable scheduled publishing (built-in feature in Sanity v3.39.0+)
-  scheduledPublishing: {
-    enabled: true,
-  },
 })
