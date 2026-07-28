@@ -83,9 +83,40 @@ const faqs = [
   { q: 'What does the hiring process look like?', a: 'Short and respectful of your time: an intro chat, a practical exercise close to the real work, and a conversation with the founders. We move quickly and give you a clear answer either way.' },
 ];
 
+const organization = {
+  '@type': 'Organization',
+  name: 'ReddiReach',
+  url: 'https://www.reddireach.com',
+};
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@graph': team.map((m) => ({
+    '@type': 'Person',
+    name: m.name,
+    jobTitle: m.role,
+    description: m.bio,
+    url: m.linkedin,
+    sameAs: [m.linkedin],
+    worksFor: organization,
+  })),
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
 export default function AboutPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Nav />
       <div className="frame">
 

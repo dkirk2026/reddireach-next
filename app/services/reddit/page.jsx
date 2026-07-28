@@ -7,6 +7,33 @@ export const metadata = {
   alternates: { canonical: '/services/reddit' },
 };
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Reddit Marketing',
+  description: reddit.meta.description,
+  serviceType: 'Reddit Marketing',
+  provider: { '@type': 'Organization', name: 'ReddiReach', url: 'https://www.reddireach.com' },
+  areaServed: { '@type': 'Place', name: 'Worldwide' },
+  url: 'https://www.reddireach.com/services/reddit',
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: reddit.faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
 export default function Page() {
-  return <ServiceLayout {...reddit} split />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <ServiceLayout {...reddit} split />
+    </>
+  );
 }

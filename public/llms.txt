@@ -36,6 +36,44 @@ The ReddiReach blog covers Reddit marketing tactics, GEO strategy, and AI search
 - AI platforms tracked: ChatGPT, Perplexity, Gemini, Google AI Overviews, Google AI Mode
 - Results timeline: Reddit engagement visible in 4-8 weeks; AI citation gains in 3-6 months
 
+## Frequently Asked Questions
+
+Q: What is ReddiReach?
+A: ReddiReach is a Reddit marketing and Generative Engine Optimization (GEO) agency. We help brands get cited and recommended by AI assistants like ChatGPT, Perplexity, Gemini, and Google AI through authentic Reddit presence and AI-optimized content.
+
+Q: What is Generative Engine Optimization (GEO)?
+A: GEO is the practice of optimizing your brand to be cited and recommended by AI search engines like ChatGPT, Perplexity, Gemini, and Google AI Overviews. Instead of ranking a page in a list of links, the goal is to become the answer the model actually gives.
+
+Q: How is GEO different from traditional SEO?
+A: SEO ranks a page in a list of links. GEO gets your brand named inside an AI-generated answer. They overlap because AI engines pull from the same trusted sources Google ranks, especially Reddit, so the two work best together.
+
+Q: Why does Reddit matter for AI search?
+A: Reddit is the number one source AI models cite for product and service recommendations. When your brand is genuinely and positively discussed in the right communities, AI is far more likely to recommend it in its answers.
+
+Q: How long until I see results from AI search optimization?
+A: Reddit engagement results are often visible within 4-8 weeks. AI citation gains typically take 3-6 months as Reddit presence, citable content, and schema compound into trusted sources AI models draw from.
+
+Q: Is Reddit marketing spam or astroturfing?
+A: No. Every comment and post is written by a real human on our team, contributing genuine value to communities. We follow all Reddit guidelines and community rules. No bots, no spam, ever.
+
+Q: How much does ReddiReach cost?
+A: The Reddit Growth plan starts at $1,600 per month. The AI Search Optimization plan is $5,000 per month. Custom enterprise programs are available on request. All plans require a 3-month minimum commitment with no setup fees.
+
+Q: Which AI engines does ReddiReach optimize for?
+A: ChatGPT (OpenAI), Perplexity, Google Gemini, Google AI Mode, and Google AI Overviews. These are the platforms your buyers increasingly use to research and choose products and services.
+
+Q: Does ReddiReach require long-term contracts?
+A: A 3-month minimum commitment is required. Authentic Reddit marketing and AI search optimization take time to show compounding results. Three months lets us run a real strategy and demonstrate meaningful ROI.
+
+Q: Can ReddiReach work with our existing marketing team?
+A: Yes. ReddiReach regularly collaborates with in-house teams and other agencies, integrating with existing workflows and marketing strategies.
+
+Q: What AI visibility tracking does ReddiReach provide?
+A: ReddiReach monitors brand mentions and citations across every major AI engine using AI Peekaboo, and reports the exact prompts where you are gaining ground against competitors.
+
+Q: Who founded ReddiReach?
+A: ReddiReach was co-founded by Filipe Lins Duarte (CEO), John Rice (CTO), and Daniel Kirk (COO). The team has been operating since 2018 and has served 500+ companies.
+
 ## Full Reference
 
 https://www.reddireach.com/llms-full.txt
