@@ -60,6 +60,7 @@ h1, h2, h3 { letter-spacing: -0.02em; font-weight: 600; }
 .display { font-size: clamp(38px, 6vw, 66px); font-weight: 700; line-height: 1.03; letter-spacing: -0.03em; }
 .h2 { font-size: clamp(28px, 4vw, 44px); line-height: 1.06; }
 .lead { color: var(--muted); font-size: clamp(16px, 2vw, 20px); line-height: 1.55; }
+.lead a { color: var(--brand-dk); font-weight: 500; text-decoration: underline; text-underline-offset: 2px; }
 
 .btn { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-family: var(--sans); font-size: 15px; font-weight: 600; padding: 12px 22px; border-radius: 8px; border: 1px solid transparent; transition: background .14s, border-color .14s, transform .12s; }
 .btn-primary { background: var(--brand); color: #fff; }

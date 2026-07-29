@@ -11,7 +11,7 @@ export const geo = {
   badge: { domain: 'chatgpt.com', html: 'ChatGPT is used by <b>800M+ people</b> every week', href: 'https://chatgpt.com' },
   title: 'Become the brand AI recommends.',
   highlight: 'AI recommends',
-  lead: 'When someone asks ChatGPT, Perplexity, Gemini or Google AI for a recommendation in your category, Generative Engine Optimization (GEO) makes sure your brand is the answer, cited by name.',
+  lead: 'When someone asks ChatGPT, Perplexity, Gemini or Google AI for a recommendation in your category, Generative Engine Optimization (GEO) makes sure your brand is the answer, cited by name, built on the same <a href="/services/seo">SEO foundations</a> that rank you on Google.',
   whatTitle: "What's included",
   whatLead: 'Everything needed to turn AI search from a blind spot into a channel.',
   features: [
@@ -57,14 +57,14 @@ export const geo = {
 
 export const seo = {
   meta: {
-    title: 'SEO that feeds AI search · ReddiReach',
+    title: 'Reddit SEO that feeds AI search · ReddiReach',
     description: 'Modern SEO from ReddiReach: technical foundations, semantic content and structured data that rank on Google and feed the AI engines built on top of it.',
   },
   eyebrow: 'SEO · Search Engine Optimization',
   badge: { domain: 'google.com', html: 'Google still powers around <b>90% of all web searches</b>', href: 'https://www.google.com' },
-  title: 'Rank where buyers and AI both look.',
-  highlight: 'buyers and AI',
-  lead: 'Search did not disappear, it split. We build the technical and content foundations that rank on Google and feed the AI answers built on top of them.',
+  title: 'SEO built to rank in Google and AI search.',
+  highlight: 'AI search',
+  lead: 'Search did not disappear, it split. We build Reddit-informed SEO, the technical and content foundations that rank on Google and feed the <a href="/services/geo">AI search optimization (GEO)</a> answers built on top of them.',
   whatTitle: "What's included",
   whatLead: 'Full-funnel SEO built for the age of AI search.',
   features: [
@@ -110,14 +110,14 @@ export const seo = {
 
 export const reddit = {
   meta: {
-    title: 'Reddit Marketing · ReddiReach',
+    title: 'Reddit Marketing Agency · ReddiReach',
     description: 'Authentic Reddit marketing from ReddiReach: get your brand recommended in the high-intent threads your buyers and the AI models already read. No bots, no spam.',
   },
-  eyebrow: 'Reddit Marketing',
+  eyebrow: 'Reddit Marketing Services',
   badge: { domain: 'reddit.com', html: 'Reddit is the <b>#1 source</b> AI models cite for recommendations', href: 'https://www.reddit.com' },
   title: 'Get recommended in the Reddit threads buyers trust.',
   highlight: 'Reddit threads',
-  lead: 'Reddit is the number one source AI models cite, and where your buyers go for honest recommendations. We get your brand mentioned there naturally, by real community members.',
+  lead: 'Reddit is the number one source AI models cite, and where your buyers go for honest recommendations. We get your brand mentioned there naturally, by real community members, reinforcing the <a href="/services/link-building">authority signals</a> AI trusts.',
   whatTitle: "What's included",
   whatLead: 'Reddit marketing that builds trust instead of burning it.',
   features: [
@@ -163,14 +163,14 @@ export const reddit = {
 
 export const linkBuilding = {
   meta: {
-    title: 'Link Building · ReddiReach',
+    title: 'Reddit Link Building · ReddiReach',
     description: 'Earn high-authority backlinks from the sites AI trusts. ReddiReach builds the credible link profile that turns into more citations and AI recommendations.',
   },
   eyebrow: 'Link Building',
   badge: { domain: 'reddit.com', html: 'Reddit is one of the <b>most-cited domains</b> AI and Google trust', href: 'https://www.reddit.com' },
-  title: 'Earn the authority AI trusts.',
+  title: 'Reddit link building that earns the authority AI trusts.',
   highlight: 'authority AI trusts',
-  lead: 'AI models weight domain authority and citation history when deciding what to recommend. We earn the high-authority links that make your brand a credible, citable source.',
+  lead: 'AI models weight domain authority and citation history when deciding what to recommend. We earn the high-authority links that make your brand a credible, citable source, reinforcing the <a href="/services/reddit">Reddit marketing</a> and <a href="/services/seo">SEO</a> work driving your AI visibility.',
   whatTitle: "What's included",
   whatLead: 'White-hat link building that compounds into citations.',
   features: [

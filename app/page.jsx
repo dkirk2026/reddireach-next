@@ -3,11 +3,11 @@ import { homeFaqs } from '@/data/faqs';
 
 export const metadata = pageMetadata({
   path: '/',
-  title: 'ReddiReach · Get AI to recommend your brand',
+  title: 'Reddit Marketing Agency · ReddiReach',
   description:
-    'ReddiReach is the leading Reddit marketing and AI search optimization (GEO) agency. We get your brand cited and recommended by ChatGPT, Perplexity, Gemini and Google AI Overviews through authentic Reddit marketing.',
+    'ReddiReach is a Reddit marketing agency that gets brands cited and recommended by ChatGPT, Perplexity, Gemini and Google AI.',
   ogDescription:
-    'The leading Reddit marketing and GEO agency. Get your brand recommended by ChatGPT, Perplexity, Gemini and Google AI.',
+    'ReddiReach is a Reddit marketing agency that gets brands cited and recommended by ChatGPT, Perplexity, Gemini and Google AI.',
 });
 
 // The homepage renders the same 7 FAQs as the <Faq /> accordion, so it gets the

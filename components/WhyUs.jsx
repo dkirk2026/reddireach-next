@@ -12,7 +12,7 @@ export default function WhyUs() {
       <div className="grid-3" style={{ marginTop: '48px' }}>
         <div className="cell">
           <div className="ico"><Fav domain="reddit.com" /></div>
-          <h3>Reddit marketing experts</h3>
+          <h3>Your Reddit marketing agency</h3>
           <p>We specialize in Reddit. Our team understands the culture, the communities, and how Reddit data feeds directly into AI search models.</p>
         </div>
         <div className="cell">

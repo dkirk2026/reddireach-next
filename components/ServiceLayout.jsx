@@ -106,7 +106,7 @@ export default function ServiceLayout(props) {
                     </a>
                   )}
                   <h1 className="display" dangerouslySetInnerHTML={{ __html: titleHtml }}></h1>
-                  <p className="lead">{lead}</p>
+                  <p className="lead" dangerouslySetInnerHTML={{ __html: lead }}></p>
                   <div className="hero-cta">
                     <a href={CAL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book a call</a>
                     <a href="#what" className="btn btn-ghost">What&apos;s included</a>
@@ -135,7 +135,7 @@ export default function ServiceLayout(props) {
                 </a>
               )}
               <h1 className="display" style={{ margin: '22px 0 18px' }} dangerouslySetInnerHTML={{ __html: titleHtml }}></h1>
-              <p className="lead" style={{ maxWidth: '710px', margin: '0 auto 30px' }}>{lead}</p>
+              <p className="lead" style={{ maxWidth: '710px', margin: '0 auto 30px' }} dangerouslySetInnerHTML={{ __html: lead }}></p>
               <div className="hero-cta" style={{ justifyContent: 'center' }}>
                 <a href={CAL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book a call</a>
                 <a href="#what" className="btn btn-ghost">What&apos;s included</a>

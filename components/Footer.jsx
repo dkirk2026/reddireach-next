@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="pad foot" style={{ paddingTop: '56px', paddingBottom: '32px' }}>
         <div className="foot-brand">
           <img className="foot-logo" src="/logo.webp" alt="ReddiReach" />
-          <p className="foot-tag">The leading Reddit marketing and AI search optimization agency for brands, startups and enterprises.</p>
+          <p className="foot-tag">The leading Reddit marketing agency for AI search optimization (GEO), built for brands, startups and enterprises.</p>
           <a className="foot-social" href="https://www.linkedin.com/company/105312582" target="_blank" rel="noopener noreferrer" aria-label="ReddiReach on LinkedIn">
             <Fav domain="linkedin.com" />
           </a>
@@ -25,7 +25,7 @@ export default function Footer() {
             <span className="foot-col-h">Services</span>
             <a href="/services/geo">GEO / AI Search</a>
             <a href="/services/seo">SEO</a>
-            <a href="/services/reddit">Reddit Marketing</a>
+            <a href="/services/reddit">Reddit Marketing Agency</a>
             <a href="/services/link-building">Link Building</a>
             <a href="/checklist">GEO Checklist</a>
           </div>
