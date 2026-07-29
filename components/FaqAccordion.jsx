@@ -25,12 +25,13 @@ export default function FaqAccordion({ faqs }) {
           }
         };
       }
-      qs.forEach((q) => {
-        q.addEventListener('click', handleClick(q));
+      const handlers = Array.from(qs).map((q) => handleClick(q));
+      qs.forEach((q, i) => {
+        q.addEventListener('click', handlers[i]);
       });
       return () => {
-        qs.forEach((q) => {
-          q.removeEventListener('click', handleClick(q));
+        qs.forEach((q, i) => {
+          q.removeEventListener('click', handlers[i]);
         });
       };
     } catch (err) {

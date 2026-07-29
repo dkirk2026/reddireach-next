@@ -213,3 +213,56 @@ export const linkBuilding = {
     body: 'Book a free call and we will show you where competitors are earning authority, and the high-value links your brand is missing.',
   },
 };
+
+export const advertising = {
+  meta: {
+    title: 'Reddit Advertising Agency · ReddiReach',
+    description: 'ReddiReach is a Reddit advertising agency running paid campaigns that put your brand in front of ready-to-buy communities, with targeting, creative and tracking built for how Reddit actually works.',
+  },
+  eyebrow: 'Reddit Advertising',
+  badge: { domain: 'reddit.com', html: 'Reddit Ads reach <b>100M+ daily active users</b>', href: 'https://www.reddit.com' },
+  title: 'Reddit ads that reach ready-to-buy audiences.',
+  highlight: 'ready-to-buy audiences',
+  lead: 'Reddit Ads put your brand directly in front of the communities already discussing your category, with targeting and creative built to feel native, backed by the <a href="/services/reddit">organic Reddit marketing</a> and <a href="/services/geo">AI search optimization (GEO)</a> work building your brand everywhere else.',
+  whatTitle: "What's included",
+  whatLead: 'Full-funnel Reddit advertising, built to convert without breaking the trust that makes Reddit work.',
+  features: [
+    { icon: 'target', title: 'Campaign strategy & setup', body: 'We build and launch Reddit Ads campaigns matched to your goals, from awareness in relevant subreddits to conversion-focused retargeting.' },
+    { icon: 'users', title: 'Audience & subreddit targeting', body: 'Precise targeting by interest, subreddit, keyword and community, so every dollar reaches the people already primed to care about your category.' },
+    { icon: 'pen', title: 'Native-feeling ad creative', body: 'Ad creative written and designed to fit the feed instead of interrupting it, the format that earns clicks instead of downvotes.' },
+    { icon: 'chart', title: 'Tracking & optimization', body: 'Pixel and conversion tracking with ongoing bid, budget and creative optimization, reported against the numbers that matter to your business.' },
+  ],
+  whoTitle: 'Built for brands ready to pay for reach.',
+  audiences: [
+    { icon: 'bag', title: 'Ecommerce and DTC', body: 'Brands that want direct-response Reddit Ads driving traffic and sales alongside their organic community presence.' },
+    { icon: 'server', title: 'SaaS and B2B', body: 'Software brands using targeted Reddit Ads to reach niche, high-intent communities competitors are not bidding on yet.' },
+    { icon: 'rocket', title: 'Brands launching fast', body: 'Newer brands that want paid reach now while organic Reddit marketing and AI visibility compound in the background.' },
+  ],
+  howTitle: 'From audience to optimized spend.',
+  steps: [
+    { title: 'Audience & subreddit mapping', body: 'We map the subreddits, interests and keywords where your buyers already spend time, and size the opportunity before you spend a dollar.' },
+    { title: 'Launch & creative testing', body: 'We launch with multiple ad variants, testing creative and placements to find what actually earns clicks in each community.' },
+    { title: 'Optimize & scale', body: 'We cut what underperforms, scale what works, and report on the metrics tied to real business results, not just clicks.' },
+  ],
+  midCta: {
+    title: 'See what Reddit Ads could do for your brand.',
+    body: 'Book a free call. We will show you the subreddits and audiences worth targeting and what a campaign could realistically return.',
+  },
+  whyTitle: 'Why Reddit Ads work',
+  why: [
+    { k: '100M+', v: 'daily active users Reddit Ads can reach' },
+    { k: '3x', v: 'lower avg. CPC than many social ad platforms' },
+    { k: '#1', v: 'Reddit is the top source AI models cite for recommendations' },
+  ],
+  faqs: [
+    { q: 'How much does Reddit advertising cost?', a: 'Reddit Ads run on an auction, so cost depends on your goals, audience and competition in your category. We tailor budget recommendations to what you are trying to achieve on a free strategy call, and there is no fixed minimum spend to get started.' },
+    { q: 'What is the difference between Reddit Ads and organic Reddit marketing?', a: 'Reddit Ads are paid placements that reach a targeted audience immediately, while organic Reddit marketing builds authentic community presence over time. We often run both together, paid ads for immediate reach and organic marketing for the trust and AI citations that compound.' },
+    { q: 'What ad formats does Reddit support?', a: 'Reddit Ads include promoted posts, video ads, carousel ads and conversation ads, all designed to sit naturally in the feed. We pick the formats that fit your goals and test creative to see what performs best in your specific communities.' },
+    { q: 'Can Reddit Ads target specific subreddits?', a: 'Yes. We target by subreddit, interest, keyword, community and audience, so your ads reach the specific communities where your buyers already spend time, not a generic broad audience.' },
+    { q: 'Do you handle tracking and reporting?', a: 'Yes. We set up pixel and conversion tracking from day one and report on the metrics tied to real business outcomes, spend, clicks, conversions and cost per result, not just impressions.' },
+  ],
+  mid: {
+    title: 'Ready to put Reddit Ads to work for your brand?',
+    body: 'Book a free call and we will show you the audiences worth targeting and how paid Reddit Ads fit alongside your organic and AI visibility strategy.',
+  },
+};

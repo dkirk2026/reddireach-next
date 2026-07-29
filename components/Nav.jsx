@@ -43,6 +43,7 @@ export default function Nav() {
               <a role="menuitem" href="/services/geo"><strong>GEO / AI Search</strong><span>Get recommended by ChatGPT, Perplexity and Google AI</span></a>
               <a role="menuitem" href="/services/seo"><strong>SEO</strong><span>Rank on Google and feed AI search</span></a>
               <a role="menuitem" href="/services/reddit"><strong>Reddit Marketing Agency</strong><span>Get recommended in high-intent threads</span></a>
+              <a role="menuitem" href="/services/advertising"><strong>Reddit Advertising</strong><span>Paid campaigns in front of ready-to-buy audiences</span></a>
               <a role="menuitem" href="/services/link-building"><strong>Link Building</strong><span>Earn the authority AI trusts</span></a>
             </div>
           </div>

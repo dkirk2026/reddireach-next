@@ -26,6 +26,7 @@ export default function Footer() {
             <a href="/services/geo">GEO / AI Search</a>
             <a href="/services/seo">SEO</a>
             <a href="/services/reddit">Reddit Marketing Agency</a>
+            <a href="/services/advertising">Reddit Advertising</a>
             <a href="/services/link-building">Link Building</a>
             <a href="/checklist">GEO Checklist</a>
           </div>
