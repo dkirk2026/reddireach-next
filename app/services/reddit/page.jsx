@@ -1,11 +1,12 @@
 import ServiceLayout from '@/components/ServiceLayout';
 import { reddit } from '@/data/services';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: '/services/reddit',
   title: reddit.meta.title,
   description: reddit.meta.description,
-  alternates: { canonical: '/services/reddit' },
-};
+});
 
 const serviceSchema = {
   '@context': 'https://schema.org',

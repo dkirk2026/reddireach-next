@@ -1,10 +1,11 @@
 import Legal from '@/components/Legal';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: '/cookies',
   title: 'Cookie Policy · ReddiReach',
   description: 'How ReddiReach (Kirk & Co., LLC) uses cookies and how you can control them.',
-  alternates: { canonical: '/cookies' },
-};
+});
 
 export default function Page() {
   return (

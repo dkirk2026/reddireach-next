@@ -3,13 +3,14 @@ import Footer from '@/components/Footer';
 import Services from '@/components/Services';
 import Tools from '@/components/Tools';
 import GeoChecklist from '@/components/GeoChecklist';
+import { pageMetadata } from '@/lib/seo';
 import { sections, totalSteps } from '@/data/checklist';
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: '/checklist',
   title: `GEO Checklist · ${totalSteps} steps to get recommended by AI search`,
   description: `Free ${totalSteps}-step GEO (Generative Engine Optimization) checklist to get your brand recommended by ChatGPT, Perplexity, Gemini and Google AI: crawler access, schema, content, Reddit presence and tracking.`,
-  alternates: { canonical: '/checklist' },
-};
+});
 
 const howToSchema = {
   '@context': 'https://schema.org',

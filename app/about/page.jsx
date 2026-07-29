@@ -2,13 +2,14 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import Fav from '@/components/Fav';
 import FaqAccordion from '@/components/FaqAccordion';
+import { pageMetadata, faqPageSchema } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: '/about',
   title: 'About ReddiReach · The Reddit marketing and AI search team',
   description:
     'Meet the ReddiReach team. For 8+ years we have helped brands, startups and enterprises get recommended by AI through authentic Reddit marketing and AI search optimization.',
-  alternates: { canonical: '/about' },
-};
+});
 
 const PROPOSALS = 'https://filipelinsduarte.github.io/proposals';
 
@@ -102,15 +103,7 @@ const personSchema = {
   })),
 };
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqs.map((f) => ({
-    '@type': 'Question',
-    name: f.q,
-    acceptedAnswer: { '@type': 'Answer', text: f.a },
-  })),
-};
+const faqSchema = faqPageSchema(faqs);
 
 export default function AboutPage() {
   return (

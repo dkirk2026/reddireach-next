@@ -1,13 +1,14 @@
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import FaqAccordion from '@/components/FaqAccordion';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: '/pricing',
   title: 'Pricing · Reddit Marketing & AI Search Optimization (GEO) · ReddiReach',
   description:
     'Simple, transparent pricing for Reddit marketing and Generative Engine Optimization (GEO). Plans from $1,600/month to get your brand recommended by ChatGPT, Perplexity, Gemini and Google AI.',
-  alternates: { canonical: '/pricing' },
-};
+});
 
 const CAL = 'https://calendly.com/kirkco/chat';
 const s2 = (d) => `https://www.google.com/s2/favicons?domain=${d}&sz=64`;

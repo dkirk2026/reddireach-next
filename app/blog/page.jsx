@@ -1,15 +1,16 @@
 import { sanityFetch, formatDate } from '@/lib/sanity';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import { pageMetadata } from '@/lib/seo';
 
 export const revalidate = 60;
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: '/blog',
   title: 'Blog · Reddit Marketing & AI Search · ReddiReach',
   description:
     'Playbooks and insights on Reddit marketing, Generative Engine Optimization (GEO), SEO and getting your brand recommended by ChatGPT, Perplexity and Google AI.',
-  alternates: { canonical: '/blog' },
-};
+});
 
 export default async function BlogIndex() {
   const posts = await sanityFetch(`*[_type == "post" && defined(slug.current)] | order(coalesce(publishedAt, _createdAt) desc){

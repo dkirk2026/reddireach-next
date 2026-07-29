@@ -1,7 +1,7 @@
 import './globals.css';
 import Script from 'next/script';
+import { SITE, OG_IMAGE, OG_IMAGE_WIDTH, OG_IMAGE_HEIGHT } from '@/lib/seo';
 
-const SITE = 'https://www.reddireach.com';
 const GA_ID = process.env.NEXT_PUBLIC_GA4_ID ?? 'G-C3W16CY6DX';
 
 export const metadata = {
@@ -18,9 +18,9 @@ export const metadata = {
     type: 'website',
     siteName: 'ReddiReach',
     url: SITE,
-    images: [{ url: `${SITE}/icon.png`, width: 512, height: 512 }],
+    images: [{ url: OG_IMAGE, width: OG_IMAGE_WIDTH, height: OG_IMAGE_HEIGHT }],
   },
-  twitter: { card: 'summary_large_image', images: [`${SITE}/icon.png`] },
+  twitter: { card: 'summary_large_image', images: [OG_IMAGE] },
   robots: { index: true, follow: true },
 };
 

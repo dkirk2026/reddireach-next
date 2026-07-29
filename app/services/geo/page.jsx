@@ -1,11 +1,12 @@
 import ServiceLayout from '@/components/ServiceLayout';
 import { geo } from '@/data/services';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: '/services/geo',
   title: geo.meta.title,
   description: geo.meta.description,
-  alternates: { canonical: '/services/geo' },
-};
+});
 
 const serviceSchema = {
   '@context': 'https://schema.org',

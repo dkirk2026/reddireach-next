@@ -1,10 +1,11 @@
 import Legal from '@/components/Legal';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: '/terms',
   title: 'Terms of Service · ReddiReach',
   description: 'The terms that govern your use of ReddiReach (Kirk & Co., LLC) services.',
-  alternates: { canonical: '/terms' },
-};
+});
 
 export default function Page() {
   return (

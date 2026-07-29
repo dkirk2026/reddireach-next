@@ -1,7 +1,9 @@
 import { PortableText } from '@portabletext/react';
-import { sanityFetch, formatDate } from '@/lib/sanity';
+import { notFound } from 'next/navigation';
+import { sanityFetch, getRelatedPosts, formatDate } from '@/lib/sanity';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import RelatedPosts from '@/components/RelatedPosts';
 
 export const revalidate = 60;
 
@@ -74,20 +76,14 @@ export async function generateMetadata({ params }) {
 export default async function BlogPost({ params }) {
   const post = await sanityFetch(SINGLE_POST_QUERY, { slug: params.slug });
 
+  // An unknown slug must return a real HTTP 404, not a 200 page that says "not
+  // found". A soft 404 keeps the URL indexable and wastes crawl budget.
   if (!post) {
-    return (
-      <div className="frame">
-        <Nav />
-        <section className="sect">
-          <div className="pad" style={{ maxWidth: '780px', margin: '0 auto' }}>
-            <a className="post-back" href="/blog">&larr; All posts</a>
-            <p>Post not found.</p>
-          </div>
-        </section>
-        <Footer />
-      </div>
-    );
+    notFound();
   }
+
+  // Related posts sharing at least one category, topped up with recent posts.
+  const related = await getRelatedPosts(params.slug, post.cats, 3);
 
   const postUrl = `https://www.reddireach.com/blog/${params.slug}`;
   const articleSchema = {
@@ -148,6 +144,8 @@ export default async function BlogPost({ params }) {
           <PortableText value={post.body || []} components={portableTextComponents} />
         </div>
       </section>
+
+      <RelatedPosts posts={related} />
 
       {/* CTA */}
       <section className="sect cta" id="cta">

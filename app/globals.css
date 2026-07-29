@@ -1094,6 +1094,10 @@ a.hero-badge:hover { border-color: var(--border-2); box-shadow: 0 2px 8px rgba(1
 .blog-card-ex { margin-top: 9px; color: var(--muted); font-size: 13.5px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .blog-card .blog-meta { margin-top: auto; padding-top: 14px; }
 
+/* Related posts module at the foot of a blog post. Reuses .blog-grid/.blog-card
+   from the blog index; this only adds the separation from the article body. */
+.related-sect { border-top: 1px solid var(--border); background: var(--surface); }
+
 
 /* ==========================================================================
    src/pages/blog/[slug].astro

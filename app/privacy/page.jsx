@@ -1,10 +1,11 @@
 import Legal from '@/components/Legal';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: '/privacy',
   title: 'Privacy Policy · ReddiReach',
   description: 'How ReddiReach (Kirk & Co., LLC) collects, uses, discloses and safeguards your information.',
-  alternates: { canonical: '/privacy' },
-};
+});
 
 export default function Page() {
   return (

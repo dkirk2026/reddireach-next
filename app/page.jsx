@@ -1,15 +1,18 @@
-export const metadata = {
+import { pageMetadata, faqPageSchema } from '@/lib/seo';
+import { homeFaqs } from '@/data/faqs';
+
+export const metadata = pageMetadata({
+  path: '/',
   title: 'ReddiReach · Get AI to recommend your brand',
   description:
     'ReddiReach is the leading Reddit marketing and AI search optimization (GEO) agency. We get your brand cited and recommended by ChatGPT, Perplexity, Gemini and Google AI Overviews through authentic Reddit marketing.',
-  alternates: { canonical: 'https://www.reddireach.com' },
-  openGraph: {
-    type: 'website',
-    url: 'https://www.reddireach.com',
-    title: 'ReddiReach · Get AI to recommend your brand',
-    description: 'The leading Reddit marketing and GEO agency. Get your brand recommended by ChatGPT, Perplexity, Gemini and Google AI.',
-  },
-};
+  ogDescription:
+    'The leading Reddit marketing and GEO agency. Get your brand recommended by ChatGPT, Perplexity, Gemini and Google AI.',
+});
+
+// The homepage renders the same 7 FAQs as the <Faq /> accordion, so it gets the
+// same FAQPage structured data the about page already had.
+const faqSchema = faqPageSchema(homeFaqs);
 
 import Nav from '@/components/Nav';
 import HeroSplit from '@/components/HeroSplit';
@@ -30,6 +33,7 @@ import Footer from '@/components/Footer';
 export default function HomePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Nav />
       <div className="frame">
         <HeroSplit />
