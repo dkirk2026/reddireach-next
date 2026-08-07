@@ -11,7 +11,7 @@ export const geo = {
   badge: { domain: 'chatgpt.com', html: 'ChatGPT is used by <b>800M+ people</b> every week', href: 'https://chatgpt.com' },
   title: 'Become the brand AI recommends.',
   highlight: 'AI recommends',
-  lead: 'When someone asks ChatGPT, Perplexity, Gemini or Google AI for a recommendation in your category, Generative Engine Optimization (GEO) makes sure your brand is the answer, cited by name, built on the same <a href="/services/seo">SEO foundations</a> that rank you on Google.',
+  lead: 'When someone asks ChatGPT, Perplexity, Gemini or Google AI for a recommendation in your category, Generative Engine Optimization (GEO) makes sure your brand is the answer, cited by name, built on the same SEO foundations that rank you on Google.',
   whatTitle: "What's included",
   whatLead: 'Everything needed to turn AI search from a blind spot into a channel.',
   features: [
@@ -64,7 +64,7 @@ export const seo = {
   badge: { domain: 'google.com', html: 'Google still powers around <b>90% of all web searches</b>', href: 'https://www.google.com' },
   title: 'SEO built to rank in Google and AI search.',
   highlight: 'AI search',
-  lead: 'Search did not disappear, it split. We build Reddit-informed SEO, the technical and content foundations that rank on Google and feed the <a href="/services/geo">AI search optimization (GEO)</a> answers built on top of them.',
+  lead: 'Search did not disappear, it split. We build Reddit-informed SEO, the technical and content foundations that rank on Google and feed the AI search optimization (GEO) answers built on top of them.',
   whatTitle: "What's included",
   whatLead: 'Full-funnel SEO built for the age of AI search.',
   features: [
@@ -117,7 +117,7 @@ export const reddit = {
   badge: { domain: 'reddit.com', html: 'Reddit is the <b>#1 source</b> AI models cite for recommendations', href: 'https://www.reddit.com' },
   title: 'Get recommended in the Reddit threads buyers trust.',
   highlight: 'Reddit threads',
-  lead: 'Reddit is the number one source AI models cite, and where your buyers go for honest recommendations. We get your brand mentioned there naturally, by real community members, reinforcing the <a href="/services/link-building">authority signals</a> AI trusts.',
+  lead: 'Reddit is the number one source AI models cite, and where your buyers go for honest recommendations. We get your brand mentioned there naturally, by real community members, reinforcing the authority signals AI trusts.',
   whatTitle: "What's included",
   whatLead: 'Reddit marketing that builds trust instead of burning it.',
   features: [
@@ -170,7 +170,7 @@ export const linkBuilding = {
   badge: { domain: 'reddit.com', html: 'Reddit is one of the <b>most-cited domains</b> AI and Google trust', href: 'https://www.reddit.com' },
   title: 'Reddit link building that earns the authority AI trusts.',
   highlight: 'authority AI trusts',
-  lead: 'AI models weight domain authority and citation history when deciding what to recommend. We earn the high-authority links that make your brand a credible, citable source, reinforcing the <a href="/services/reddit">Reddit marketing</a> and <a href="/services/seo">SEO</a> work driving your AI visibility.',
+  lead: 'AI models weight domain authority and citation history when deciding what to recommend. We earn the high-authority links that make your brand a credible, citable source, reinforcing the Reddit marketing and SEO work driving your AI visibility.',
   whatTitle: "What's included",
   whatLead: 'White-hat link building that compounds into citations.',
   features: [
@@ -223,7 +223,7 @@ export const advertising = {
   badge: { domain: 'reddit.com', html: 'Reddit Ads reach <b>100M+ daily active users</b>', href: 'https://www.reddit.com' },
   title: 'Reddit ads that reach ready-to-buy audiences.',
   highlight: 'ready-to-buy audiences',
-  lead: 'Reddit Ads put your brand directly in front of the communities already discussing your category, with targeting and creative built to feel native, backed by the <a href="/services/reddit">organic Reddit marketing</a> and <a href="/services/geo">AI search optimization (GEO)</a> work building your brand everywhere else.',
+  lead: 'Reddit Ads put your brand directly in front of the communities already discussing your category, with targeting and creative built to feel native, backed by the organic Reddit marketing and AI search optimization (GEO) work building your brand everywhere else.',
   whatTitle: "What's included",
   whatLead: 'Full-funnel Reddit advertising, built to convert without breaking the trust that makes Reddit work.',
   features: [
