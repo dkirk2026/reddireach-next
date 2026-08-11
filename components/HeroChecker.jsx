@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { trackEvent } from '@/lib/analytics';
 
 // "Check your AI visibility" tool, modeled on the live reddireach.com flow:
 // enter a URL, watch a short scan animation, then see a real visibility score
@@ -45,7 +46,14 @@ export default function HeroChecker() {
         minDelay,
       ]);
       if (stepTimer.current) clearInterval(stepTimer.current);
-      if (res && typeof res.score === 'number') { setResult(res); setPhase('done'); }
+      if (res && typeof res.score === 'number') {
+        setResult(res);
+        setPhase('done');
+        // The checker is the site's lead capture, so a completed scan is the
+        // conversion. Fired only on a real scored result, never on an error,
+        // and best-effort so a blocked tag cannot affect what the visitor sees.
+        trackEvent('generate_lead', { method: 'visibility_checker', score: res.score });
+      }
       else setPhase('error');
     } catch (err) {
       if (stepTimer.current) clearInterval(stepTimer.current);
