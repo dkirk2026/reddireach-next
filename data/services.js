@@ -155,6 +155,22 @@ export const reddit = {
     { q: 'Which subreddits will you target?', a: 'The communities where your buyers ask for recommendations, ranked by buying intent and fit, plus the exact threads Google and AI engines already surface for your category.' },
     { q: 'How many comments do I get each month?', a: 'It depends on your plan. Our Reddit Growth plan includes 20 targeted comments per month in your niche and adjacent subreddits, with higher volume available on custom plans.' },
   ],
+  plan: {
+    eyebrow: 'The Programme at a Glance',
+    title: 'Start with three months, then decide how far to go.',
+    leftCap: 'Programme terms',
+    terms: [
+      { label: '3-month minimum', body: 'A review at the end of every month, so progress is visible long before the three months end.' },
+      { label: '$2,000 / month', body: '$6,000 across the three-month minimum, invoiced monthly rather than paid up front.' },
+      { label: 'Best for', body: 'Brands that want to validate Reddit as a channel before a larger, longer-term programme.' },
+    ],
+    rightCap: '30 contributions a month, each logged with its live link',
+    deliverables: [
+      { n: '2', title: 'Strategic discussions', body: 'New threads built around real buying questions, from reviews to "is it any good?" posts.' },
+      { n: '8', title: 'Community comments', body: 'Helpful replies from non-branded accounts in threads where buyers compare options.' },
+      { n: '20', title: 'Brand-profile comments', body: 'Customer support, product advice and honest answers from the brand profile we create and manage.' },
+    ],
+  },
   mid: {
     title: 'Want to own your category on Reddit?',
     body: 'Book a free call and we will show you the subreddits, threads and competitors that matter for your brand, and where you have zero presence today.',

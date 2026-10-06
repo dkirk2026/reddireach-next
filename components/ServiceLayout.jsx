@@ -61,6 +61,7 @@ export default function ServiceLayout(props) {
     faqs = [],
     midCta,
     mid,
+    plan,
     split = false,
   } = props;
 
@@ -228,6 +229,45 @@ export default function ServiceLayout(props) {
             </div>
           </div>
         </section>
+
+        {/* Programme at a Glance */}
+        {plan && (
+          <section className="sect">
+            <div className="pad">
+              <div className="sect-head">
+                <span className="eyebrow">{plan.eyebrow}</span>
+                <h2 className="h2">{plan.title}</h2>
+              </div>
+              <div className="plan-grid">
+                <div className="plan-col">
+                  <span className="cap plan-cap">{plan.leftCap}</span>
+                  <div className="plan-terms">
+                    {plan.terms.map((t, i) => (
+                      <div key={i} className="plan-term">
+                        <h3 className="plan-term-label">{t.label}</h3>
+                        <p className="plan-term-body">{t.body}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="plan-col">
+                  <span className="cap plan-cap">{plan.rightCap}</span>
+                  <div className="plan-deliverables">
+                    {plan.deliverables.map((d, i) => (
+                      <div key={i} className="plan-deliv">
+                        <div className={`plan-n svc-n${i}`}>{d.n}</div>
+                        <div>
+                          <h3 className="plan-deliv-title">{d.title}</h3>
+                          <p className="plan-deliv-body">{d.body}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Mid-page CTA */}
         {midCta && (
