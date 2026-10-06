@@ -26,14 +26,15 @@ const B = {
 
 const plans = [
   {
-    name: 'Reddit Growth', price: '$1,600', period: '/month', featured: false,
-    desc: 'Perfect for businesses wanting to scale with Reddit marketing.',
+    name: 'Reddit Growth', price: '$2,000', period: '/month', featured: false,
+    desc: 'Validate Reddit as a channel with 30 authentic contributions a month.',
     cta: 'Get started', href: CAL,
     features: [
-      { text: '20 targeted comments/month in r/[Niche] and adjacent subreddits', brands: [B.reddit] },
-      { text: 'Thread monitoring to spot relevant conversations as they happen', brands: [B.reddit] },
-      { text: 'Mention-share tracking versus your key competitors' },
-      { text: 'Monthly report on reach, engagement and AI citation frequency', brands: [B.peekaboo] },
+      { text: '2 strategic discussions per month built around real buying questions', brands: [B.reddit] },
+      { text: '8 community comments from non-branded accounts in comparison threads', brands: [B.reddit] },
+      { text: '20 brand-profile comments from the brand profile we create and manage', brands: [B.reddit] },
+      { text: 'Every contribution logged with its live link' },
+      { text: 'Monthly review so progress is visible throughout' },
     ],
   },
   {
@@ -109,10 +110,10 @@ const offerSchema = {
       item: {
         '@type': 'Offer',
         name: 'Reddit Growth',
-        description: 'Authentic Reddit marketing with 20 targeted comments/month, thread monitoring, and AI citation reporting.',
-        price: '1600',
+        description: 'Validate Reddit as a channel with 30 authentic contributions a month: 2 strategic discussions, 8 community comments and 20 brand-profile comments, each logged with its live link.',
+        price: '2000',
         priceCurrency: 'USD',
-        priceSpecification: { '@type': 'UnitPriceSpecification', price: '1600', priceCurrency: 'USD', unitText: 'MONTH' },
+        priceSpecification: { '@type': 'UnitPriceSpecification', price: '2000', priceCurrency: 'USD', unitText: 'MONTH' },
         seller: { '@type': 'Organization', name: 'ReddiReach' },
         url: 'https://www.reddireach.com/pricing',
       },
