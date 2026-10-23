@@ -8,7 +8,7 @@ export const revalidate = 3600;
 
 export default async function sitemap() {
   const staticRoutes = [
-    '', '/about', '/pricing', '/checklist',
+    '', '/about', '/pricing', '/checklist', '/tools/reddit-shadowban-checker',
     '/services/geo', '/services/seo', '/services/reddit', '/services/link-building',
     '/privacy', '/terms', '/cookies', '/blog',
   ].map((path) => ({ url: `${SITE}${path}`, lastModified: new Date() }));

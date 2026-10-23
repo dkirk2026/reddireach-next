@@ -1243,3 +1243,40 @@ a.hero-badge:hover { border-color: var(--border-2); box-shadow: 0 2px 8px rgba(1
 .vis-sect .sect-head { text-align: center; max-width: 640px; margin-left: auto; margin-right: auto; }
 .vis-sect .checker-band { margin-top: 40px; }
 .checker-band .checker { max-width: 560px; width: 100%; }
+
+/* ==========================================================================
+   /tools/reddit-shadowban-checker (reuses the .checker card and .svc-mid band)
+   ========================================================================== */
+/* clip, not hidden: the 820px glow made the hero a sideways scroll container,
+   so a centring scrollIntoView could shift the form off-screen at phone width */
+.sb-hero { overflow: clip; }
+.sb-hero .display { margin: 22px 0 18px; font-size: clamp(34px, 5.2vw, 58px); text-wrap: balance; }
+.sb-hero .lead { max-width: 640px; margin: 0 auto 36px; text-wrap: balance; }
+.sb-hero .checker { text-align: left; }
+.sb-checker .btn:disabled { opacity: 0.7; cursor: wait; transform: none; }
+.sb-checker .btn:focus-visible,
+.sb-guide:focus-visible,
+.sb-cta-call:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.sb-error { margin-top: 11px; font-size: 12.5px; line-height: 1.45; color: var(--brand-dk); }
+
+.sb-scanning { margin-top: 18px; }
+.sb-result { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--border); animation: sbIn .35s ease-out both; }
+@keyframes sbIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.sb-result .checker-grade { display: inline-block; }
+.sb-title { font-size: 19px; font-weight: 650; letter-spacing: -0.01em; line-height: 1.3; margin: 12px 0 8px; text-wrap: balance; overflow-wrap: anywhere; }
+.sb-body { font-size: 14.5px; line-height: 1.55; color: var(--muted); text-wrap: pretty; }
+.sb-notes { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
+.sb-note { display: grid; grid-template-columns: 112px 1fr; gap: 12px; align-items: baseline; }
+.sb-note dt { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); }
+.sb-note dd { font-size: 13.5px; line-height: 1.5; color: var(--text); text-wrap: pretty; }
+.sb-guide { display: inline-block; margin-top: 16px; font-size: 14px; font-weight: 600; color: var(--brand-dk); text-decoration: underline; text-underline-offset: 3px; }
+.sb-guide:hover { color: var(--brand); }
+
+.sb-faq .faq-q { text-wrap: balance; }
+
+.sb-cta .svc-mid-action { gap: 20px; }
+.sb-cta-call { text-decoration: underline; text-underline-offset: 3px; }
+.sb-cta-call:hover { color: var(--text); }
+
+@media (max-width: 520px) { .sb-note { grid-template-columns: 1fr; gap: 2px; } }
+@media (prefers-reduced-motion: reduce) { .sb-result { animation: none; } }
