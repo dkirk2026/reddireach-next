@@ -1269,6 +1269,9 @@ a.hero-badge:hover { border-color: var(--border-2); box-shadow: 0 2px 8px rgba(1
 .sb-note { display: grid; grid-template-columns: 112px 1fr; gap: 12px; align-items: baseline; }
 .sb-note dt { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); }
 .sb-note dd { font-size: 13.5px; line-height: 1.5; color: var(--text); text-wrap: pretty; }
+.sb-note dd a { color: var(--brand-dk); font-weight: 500; text-decoration: underline; text-underline-offset: 2px; }
+.sb-note dd a:hover { color: var(--brand); }
+.sb-note dd a:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
 .sb-guide { display: inline-block; margin-top: 16px; font-size: 14px; font-weight: 600; color: var(--brand-dk); text-decoration: underline; text-underline-offset: 3px; }
 .sb-guide:hover { color: var(--brand); }
 

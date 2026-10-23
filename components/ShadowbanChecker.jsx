@@ -2,41 +2,17 @@
 
 import { useState } from 'react';
 import { normalizeUsername } from '@/lib/shadowban';
+import {
+  SHADOWBAN_RESULTS as RESULTS,
+  SHADOWBAN_NOTES,
+  SHADOWBAN_GUIDE_URL,
+  APPEAL_NOTE,
+  REDDIT_APPEALS_URL,
+} from '@/data/shadowban';
 
 // The interactive box on /tools/reddit-shadowban-checker. Validation and the
 // Reddit call live in lib/shadowban.js and app/api/shadowban; this file only
-// renders the form and the one result.
-
-const GUIDE_URL = '/blog/shadowbanned-on-reddit-2026-fixes-and-safe-posting-system';
-
-// One entry per outcome returned by /api/shadowban. The chip classes reuse the
-// grade colours from the homepage visibility checker.
-const RESULTS = {
-  visible: {
-    label: 'Visible',
-    chip: 'grade-strong',
-    title: (name) => `u/${name} is visible to everyone.`,
-    body: 'Reddit shows this profile to logged-out visitors, so the account is not shadowbanned across the site.',
-  },
-  not_found: {
-    label: 'Not found',
-    chip: 'grade-low',
-    title: (name) => `Reddit says u/${name} does not exist.`,
-    body: 'Reddit gives this same answer when an account is shadowbanned, deleted or was never created. If you can still log in to it, a shadowban is the likely cause.',
-  },
-  suspended: {
-    label: 'Suspended',
-    chip: 'grade-low',
-    title: (name) => `u/${name} is suspended.`,
-    body: 'Reddit has suspended this account and, unlike a shadowban, says so publicly. If it is your account, log in to read the notice Reddit shows you.',
-  },
-  unavailable: {
-    label: 'No answer',
-    chip: 'grade-moderate',
-    title: () => 'Reddit did not answer this check.',
-    body: 'Reddit blocked or rate-limited the request, so there is no result yet. Try again in a minute, or use the check by hand below.',
-  },
-};
+// renders the form and the one result. All copy lives in data/shadowban.js.
 
 function isKnownOutcome(outcome) {
   return typeof outcome === 'string' && Object.prototype.hasOwnProperty.call(RESULTS, outcome);
@@ -130,16 +106,24 @@ export default function ShadowbanChecker() {
             <h2 className="sb-title">{copy.title(result.username)}</h2>
             <p className="sb-body">{copy.body}</p>
             <dl className="sb-notes">
-              <div className="sb-note">
-                <dt>Not covered</dt>
-                <dd>Subreddit bans, and single posts removed by AutoModerator or the spam filter.</dd>
-              </div>
-              <div className="sb-note">
-                <dt>Check by hand</dt>
-                <dd>Open your profile and a recent post in a private browser window.</dd>
-              </div>
+              {SHADOWBAN_NOTES.map((note) => (
+                <div className="sb-note" key={note.label}>
+                  <dt>{note.label}</dt>
+                  <dd>{note.text}</dd>
+                </div>
+              ))}
+              {copy.appeal && (
+                <div className="sb-note">
+                  <dt>{APPEAL_NOTE.label}</dt>
+                  <dd>
+                    {APPEAL_NOTE.before}
+                    <a href={REDDIT_APPEALS_URL} target="_blank" rel="noopener noreferrer">{APPEAL_NOTE.linkText}</a>
+                    {APPEAL_NOTE.after}
+                  </dd>
+                </div>
+              )}
             </dl>
-            <a className="sb-guide" href={GUIDE_URL}>Read the fixes in our shadowban guide</a>
+            <a className="sb-guide" href={SHADOWBAN_GUIDE_URL}>Read the fixes in our shadowban guide</a>
           </div>
         )}
       </div>
