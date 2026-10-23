@@ -36,6 +36,40 @@ describe('redirects', () => {
   });
 });
 
+// Wave 1 of the blog plan: each merged post (left) 301s to its survivor (right).
+// Source: content-workflow-pilot/reddireach-wave1-2026-10-23/wave-map.json, every
+// post listed under a survivor whose own slug differs from the survivor's.
+const WAVE1_MERGES = [
+  ['reddit-marketing-agencies-and-what-top-lists-get-wrong', 'best-reddit-marketing-agencies'],
+  ['soar-agency-alternatives-for-reddit-marketing-in-2026', 'best-reddit-marketing-agencies'],
+  ['2026-update-reddit-marketing-agency-for-saas-ecommerce-strategy-execution-and-measurable-roi', 'how-to-choose-a-reddit-marketing-agency'],
+  ['reddit-marketing-agency-guide-for-2026', 'how-to-choose-a-reddit-marketing-agency'],
+  ['underpaid-overworked-in-2026-when-to-hire-a-reddit-growth-partner', 'how-to-choose-a-reddit-marketing-agency'],
+  ['reddit-marketing-deliverables-checklist-for-2026', 'how-to-choose-a-reddit-marketing-agency'],
+  ['how-to-market-on-reddit-without-getting-banned', 'reddit-marketing-strategy'],
+  ['reddit-promotion-without-being-salesy-in-2026-post-templates', 'reddit-marketing-strategy'],
+  ['improve-brand-visibility-on-reddit-without-getting-downvoted', 'reddit-marketing-strategy'],
+  ['reddit-marketing-in-2026-without-creator-energy', 'reddit-marketing-strategy'],
+  ['lurkers-everywhere-fix-engagement-drop-off-in-2026-communities', 'reddit-marketing-strategy'],
+  ['engagement-collapse-in-2026-fix-they-watch-don-t-comment', 'reddit-marketing-strategy'],
+];
+
+describe('wave 1 merge redirects (do not ship before the wave 1 survivors publish)', () => {
+  it.each(WAVE1_MERGES)('/blog/%s goes permanently to /blog/%s', (merged, survivor) => {
+    expect(find(`/blog/${merged}`)).toEqual({
+      source: `/blog/${merged}`,
+      destination: `/blog/${survivor}`,
+      permanent: true,
+    });
+  });
+
+  it('repoints the legacy WordPress URL straight to the strategy pillar, not via a merged post', () => {
+    expect(find('/how-to-avoid-common-mistakes-when-marketing-on-reddit').destination).toBe(
+      '/blog/reddit-marketing-strategy'
+    );
+  });
+});
+
 describe('findChains', () => {
   it('flags a redirect that lands on another redirect source', () => {
     const list = [

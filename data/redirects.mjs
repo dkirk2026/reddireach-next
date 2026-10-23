@@ -3,6 +3,15 @@
 // example that no destination is itself a redirect source, which would make
 // a chain). .mjs because Node loads this directly when it reads the config.
 
+// Permanent redirects from each merged blog post to the post it was merged into.
+function mergeInto(survivorSlug, mergedSlugs) {
+  return mergedSlugs.map((slug) => ({
+    source: `/blog/${slug}`,
+    destination: `/blog/${survivorSlug}`,
+    permanent: true,
+  }));
+}
+
 export const redirects = [
   // /geo moved to /services/geo in this build — preserve SEO equity and backlinks
   { source: '/geo', destination: '/services/geo', permanent: true },
@@ -31,9 +40,12 @@ export const redirects = [
     destination: '/blog/reddit-lead-generation-playbook-for-saas-ecommerce-2026',
     permanent: true,
   },
+  // Repointed in wave 1: its old destination,
+  // how-to-market-on-reddit-without-getting-banned, merges into the strategy
+  // pillar, so this goes straight there instead of through a second hop.
   {
     source: '/how-to-avoid-common-mistakes-when-marketing-on-reddit',
-    destination: '/blog/how-to-market-on-reddit-without-getting-banned',
+    destination: '/blog/reddit-marketing-strategy',
     permanent: true,
   },
   // Old WordPress taxonomy and author archives. Wildcards so every legacy
@@ -49,4 +61,28 @@ export const redirects = [
     destination: '/services/seo',
     permanent: true,
   },
+
+  // Wave 1 merges of the blog plan. DO NOT SHIP BEFORE THE WAVE 1 SURVIVORS
+  // PUBLISH: best-reddit-marketing-agencies and reddit-marketing-strategy are
+  // new slugs that do not exist yet, so until they are live these would send
+  // readers to a 404. Each merged post goes straight to its survivor.
+  // Source: content-workflow-pilot/reddireach-wave1-2026-10-23/wave-map.json.
+  ...mergeInto('best-reddit-marketing-agencies', [
+    'reddit-marketing-agencies-and-what-top-lists-get-wrong',
+    'soar-agency-alternatives-for-reddit-marketing-in-2026',
+  ]),
+  ...mergeInto('how-to-choose-a-reddit-marketing-agency', [
+    '2026-update-reddit-marketing-agency-for-saas-ecommerce-strategy-execution-and-measurable-roi',
+    'reddit-marketing-agency-guide-for-2026',
+    'underpaid-overworked-in-2026-when-to-hire-a-reddit-growth-partner',
+    'reddit-marketing-deliverables-checklist-for-2026',
+  ]),
+  ...mergeInto('reddit-marketing-strategy', [
+    'how-to-market-on-reddit-without-getting-banned',
+    'reddit-promotion-without-being-salesy-in-2026-post-templates',
+    'improve-brand-visibility-on-reddit-without-getting-downvoted',
+    'reddit-marketing-in-2026-without-creator-energy',
+    'lurkers-everywhere-fix-engagement-drop-off-in-2026-communities',
+    'engagement-collapse-in-2026-fix-they-watch-don-t-comment',
+  ]),
 ];
