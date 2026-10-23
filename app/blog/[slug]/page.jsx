@@ -1,6 +1,7 @@
 import { PortableText } from '@portabletext/react';
 import { notFound } from 'next/navigation';
 import { sanityFetch, getRelatedPosts, formatDate } from '@/lib/sanity';
+import { postTitleTag } from '@/lib/seo';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import RelatedPosts from '@/components/RelatedPosts';
@@ -37,6 +38,7 @@ const portableTextComponents = {
 
 const SINGLE_POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
   title,
+  seoTitle,
   "slug": slug.current,
   excerpt,
   publishedAt,
@@ -58,7 +60,7 @@ export async function generateMetadata({ params }) {
   const url = `https://www.reddireach.com/blog/${params.slug}`;
   const ogImage = post?.img ? `${post.img}?w=1200&h=630&fit=crop&auto=format` : 'https://www.reddireach.com/icon.png';
   return {
-    title: post ? `${post.title} · ReddiReach Blog` : 'ReddiReach Blog',
+    title: post ? postTitleTag(post) : 'ReddiReach Blog',
     description: post?.excerpt || '',
     alternates: { canonical: url },
     openGraph: {
