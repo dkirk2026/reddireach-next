@@ -58,8 +58,8 @@ export default function ShadowbanCheckerPage() {
             <div className="svc-mid sb-cta">
               <div className="svc-mid-copy">
                 <span className="eyebrow">Ready when you are</span>
-                <h2 className="svc-mid-h">Want your brand on Reddit without the bans?</h2>
-                <p className="svc-mid-p">We get your brand mentioned naturally, by real community members, in the threads your buyers and the AI models already read. No bots, no spam.</p>
+                <h2 className="svc-mid-h">Want help running Reddit for your brand?</h2>
+                <p className="svc-mid-p">We plan your brand's Reddit discussions and comments, log every contribution with its live link, and review the results with you each month.</p>
               </div>
               <div className="svc-mid-action">
                 <a href="/services/reddit" className="btn btn-primary">See the full service</a>
