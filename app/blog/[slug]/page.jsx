@@ -1,47 +1,24 @@
-import { PortableText } from '@portabletext/react';
 import { notFound } from 'next/navigation';
 import { sanityFetch, getRelatedPosts, formatDate } from '@/lib/sanity';
 import { postTitleTag } from '@/lib/seo';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import RelatedPosts from '@/components/RelatedPosts';
+import BlogBody from '@/components/BlogBody';
+import { publishedPostFilter } from '@/data/blog-migration.mjs';
 
 export const revalidate = 60;
 
 const CAL = 'https://calendly.com/kirkco/chat';
 
-const portableTextComponents = {
-  types: {
-    image: ({ value }) =>
-      value?.url ? (
-        <figure className="post-fig">
-          <img
-            src={`${value.url}?w=1400&auto=format`}
-            alt={value.alt || ''}
-            loading="lazy"
-          />
-        </figure>
-      ) : null,
-  },
-  marks: {
-    link: ({ children, value }) => {
-      const href = value?.href || '#';
-      const ext = /^https?:\/\//.test(href) && !href.includes('reddireach.com');
-      return (
-        <a href={href} {...(ext ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
-          {children}
-        </a>
-      );
-    },
-  },
-};
 
-const SINGLE_POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
+const SINGLE_POST_QUERY = `*[${publishedPostFilter} && slug.current == $slug][0]{
   title,
   seoTitle,
   "slug": slug.current,
   excerpt,
   publishedAt,
+  contentUpdatedAt,
   "img": mainImage.asset->url,
   "author": author->name,
   "cats": categories[]->title,
@@ -50,7 +27,7 @@ const SINGLE_POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
 
 export async function generateStaticParams() {
   const slugs = await sanityFetch(
-    `*[_type == "post" && defined(slug.current)]{ "slug": slug.current }`
+    `*[${publishedPostFilter}]{ "slug": slug.current }`
   );
   return (slugs || []).map(({ slug }) => ({ slug }));
 }
@@ -96,7 +73,7 @@ export default async function BlogPost({ params }) {
     headline: post.title,
     description: post.excerpt,
     datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
+    dateModified: post.contentUpdatedAt || post.publishedAt,
     image: post.img ? `${post.img}?w=1200&h=630&fit=crop&auto=format` : undefined,
     author: post.author ? { '@type': 'Person', name: post.author } : undefined,
     publisher: { '@type': 'Organization', name: 'ReddiReach', logo: { '@type': 'ImageObject', url: 'https://www.reddireach.com/icon.png' } },
@@ -126,6 +103,7 @@ export default async function BlogPost({ params }) {
           <div className="post-byline">
             {post.author && <span>{post.author}</span>}
             <span>{formatDate(post.publishedAt)}</span>
+            {post.contentUpdatedAt && <span>Updated {formatDate(post.contentUpdatedAt)}</span>}
           </div>
         </div>
       </section>
@@ -143,7 +121,7 @@ export default async function BlogPost({ params }) {
       {/* Body */}
       <section className="sect">
         <div className="pad post-body">
-          <PortableText value={post.body || []} components={portableTextComponents} />
+          <BlogBody body={post.body} />
         </div>
       </section>
 

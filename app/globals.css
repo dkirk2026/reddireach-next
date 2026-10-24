@@ -1135,10 +1135,18 @@ a.hero-badge:hover { border-color: var(--border-2); box-shadow: 0 2px 8px rgba(1
 .post-cover img { width: 100%; display: block; }
 
 /* Prose */
-.post-body { max-width: 760px; margin: 0 auto; }
+.post-body { max-width: 760px; margin: 0 auto; overflow-wrap: anywhere; }
+.post-body code { white-space: pre-wrap; }
 .post-body p { color: #2c2d33; font-size: 17px; line-height: 1.75; margin-bottom: 18px; }
 .post-body h2 { font-size: 26px; font-weight: 600; letter-spacing: -0.02em; margin: 42px 0 14px; }
 .post-body h3 { font-size: 20px; font-weight: 600; margin: 30px 0 10px; }
+.post-body h4 { font-size: 18px; font-weight: 600; margin: 24px 0 10px; }
+.post-table { overflow-x: auto; margin: 24px 0; border: 1px solid var(--border); border-radius: 14px; }
+.post-table table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 15px; line-height: 1.6; }
+.post-table th, .post-table td { padding: 14px 18px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+.post-table th { background: var(--surface); color: var(--text); font-weight: 600; }
+.post-table caption { padding: 14px 18px; text-align: left; color: var(--muted); }
+.post-table:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
 .post-body ul, .post-body ol { margin: 0 0 18px; padding-left: 24px; }
 .post-body li { color: #2c2d33; font-size: 17px; line-height: 1.7; margin-bottom: 8px; }
 .post-body li::marker { color: var(--brand); }

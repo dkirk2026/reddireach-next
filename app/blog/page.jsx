@@ -2,6 +2,7 @@ import { sanityFetch, formatDate } from '@/lib/sanity';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import { pageMetadata } from '@/lib/seo';
+import { publishedPostFilter } from '@/data/blog-migration.mjs';
 
 export const revalidate = 60;
 
@@ -13,7 +14,7 @@ export const metadata = pageMetadata({
 });
 
 export default async function BlogIndex() {
-  const posts = await sanityFetch(`*[_type == "post" && defined(slug.current)] | order(coalesce(publishedAt, _createdAt) desc){
+  const posts = await sanityFetch(`*[${publishedPostFilter}] | order(coalesce(publishedAt, _createdAt) desc){
   title,
   "slug": slug.current,
   excerpt,

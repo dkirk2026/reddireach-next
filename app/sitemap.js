@@ -1,4 +1,5 @@
 import { sanityFetch } from '@/lib/sanity';
+import { publishedPostFilter } from '@/data/blog-migration.mjs';
 
 const SITE = 'https://www.reddireach.com';
 
@@ -9,14 +10,14 @@ export const revalidate = 3600;
 export default async function sitemap() {
   const staticRoutes = [
     '', '/about', '/pricing', '/checklist', '/tools/reddit-shadowban-checker',
-    '/services/geo', '/services/seo', '/services/reddit', '/services/link-building',
+    '/services/geo', '/services/seo', '/services/reddit', '/services/link-building', '/services/advertising',
     '/privacy', '/terms', '/cookies', '/blog',
   ].map((path) => ({ url: `${SITE}${path}`, lastModified: new Date() }));
 
   let posts = [];
   try {
     const slugs = await sanityFetch(
-      `*[_type == "post" && defined(slug.current)]{ "slug": slug.current, "updated": _updatedAt }`
+      `*[${publishedPostFilter}]{ "slug": slug.current, "updated": coalesce(contentUpdatedAt, _updatedAt) }`
     );
     posts = (slugs || []).map((p) => ({
       url: `${SITE}/blog/${p.slug}`,
