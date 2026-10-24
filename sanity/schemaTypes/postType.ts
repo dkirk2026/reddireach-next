@@ -132,6 +132,7 @@ export const postType = defineType({
             {title: 'Heading 1', value: 'h1'},
             {title: 'Heading 2', value: 'h2'},
             {title: 'Heading 3', value: 'h3'},
+            {title: 'Heading 4', value: 'h4'},
             {title: 'Quote', value: 'blockquote'},
           ],
           lists: [
@@ -492,6 +493,12 @@ export const postType = defineType({
     }),
 
     // Publishing Information
+    defineField({
+      name: 'contentUpdatedAt',
+      title: 'Content updated at',
+      type: 'datetime',
+      description: 'Date of the last substantive article revision; the original publication date is preserved.',
+    }),
     defineField({
       name: 'publishedAt',
       title: `Published Date (Your Local Time: ${Intl.DateTimeFormat().resolvedOptions().timeZone})`,
