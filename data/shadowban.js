@@ -63,7 +63,7 @@ export const SHADOWBAN_FAQS = [
   },
   {
     q: 'How does this checker work?',
-    a: 'It asks Reddit for the public profile, as a logged-out visitor would, with no login. If Reddit shows the profile, the whole account is not hidden, though a temporary ban leaves a profile unchanged. If Reddit shows no profile, its page for a missing profile says the account "may have been banned or the username is incorrect". We do not store the usernames you check.',
+    a: 'This is a manual checking guide. Copy your profile link, open it in a private browser window while logged out, check a recent post by direct link, then read your Reddit inbox for notices. It does not fetch an account status or collect your username. A missing profile alone does not prove a shadowban, and a temporary ban can leave a profile unchanged.',
   },
   {
     q: 'Can my posts be hidden even if I am not shadowbanned?',

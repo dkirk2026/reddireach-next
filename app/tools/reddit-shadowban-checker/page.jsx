@@ -7,9 +7,9 @@ import { SHADOWBAN_FAQS } from '@/data/shadowban';
 
 export const metadata = pageMetadata({
   path: '/tools/reddit-shadowban-checker',
-  title: 'Reddit Shadowban Checker · Free shadowban test',
+  title: 'Reddit Shadowban Checker: Free Manual Check',
   description:
-    'Find out if your Reddit account is shadowbanned. Enter any username for a free, instant result, plus what the check misses and how to fix it.',
+    'Check your Reddit profile, posts and inbox with a free manual guide. Learn what each check shows, what it cannot prove, and when to appeal.',
 });
 
 const CAL = 'https://calendly.com/kirkco/chat';
@@ -33,7 +33,7 @@ export default function ShadowbanCheckerPage() {
               Free Reddit <span className="u" style={{ color: 'var(--brand)' }}>shadowban</span> checker
             </h1>
             <p className="lead sb-lead">
-              Getting zero replies and no upvotes? Check in seconds whether Reddit is hiding your whole account from everyone but you.
+              Getting zero replies and no upvotes? Follow these manual checks to separate a hidden profile, a ban notice and a removed post.
             </p>
             <div className="checker-band">
               <ShadowbanChecker />
