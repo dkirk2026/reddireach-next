@@ -30,14 +30,16 @@ export const redirects = [
     destination: '/services/reddit',
     permanent: true,
   },
+  // Repointed for waves 2 to 4: the lead-generation playbook these used to
+  // reach merges into the new lead generation guide, so they go straight there.
   {
     source: '/quality-leads-on-reddit',
-    destination: '/blog/reddit-lead-generation-playbook-for-saas-ecommerce-2026',
+    destination: '/blog/reddit-lead-generation',
     permanent: true,
   },
   {
     source: '/how-to-generate-quality-leads-on-reddit-the-authentic-approach-guide',
-    destination: '/blog/reddit-lead-generation-playbook-for-saas-ecommerce-2026',
+    destination: '/blog/reddit-lead-generation',
     permanent: true,
   },
   // Repointed in wave 1: its old destination,
@@ -84,5 +86,70 @@ export const redirects = [
     'reddit-marketing-in-2026-without-creator-energy',
     'lurkers-everywhere-fix-engagement-drop-off-in-2026-communities',
     'engagement-collapse-in-2026-fix-they-watch-don-t-comment',
+  ]),
+
+  // Waves 2 to 4 merges of the blog plan. SHIP ONLY IN THE SAME DEPLOY THAT
+  // PUBLISHES ALL 21 SURVIVORS: six of them are new slugs that do not exist
+  // yet, so until they are live these would send readers to a 404.
+  // Source: content-workflow-pilot/reddireach-wave1-2026-10-23/wave-map.json.
+  ...mergeInto('best-reddit-marketing-tools-for-2025-2026-plus-the-exact-moments-to-hire-an-agency-instead', [
+    'reddit-marketing-tool-guide-for-saas-founders-2026',
+    'reddit-lead-generation-tools-2026-how-to-choose-best-options-for-saas-ecom',
+  ]),
+  ...mergeInto('automated-reddit-marketing-tools-what-to-automate-and-avoid', [
+    'ai-powered-reddit-engagement-without-sounding-like-a-bot',
+    'ai-powered-reddit-engagement-for-saas-automate-vs-human-vs-roi',
+  ]),
+  ...mergeInto('how-to-set-up-reddit-keyword-monitoring-for-saas-and-ecommerce', [
+    'reddit-first-demand-signals-in-2026',
+  ]),
+  ...mergeInto('reddit-analytics-metrics-that-matter-for-saas-and-growth-teams', [
+    'reddit-marketing-roi-in-2026',
+  ]),
+  ...mergeInto('reddit-ai-search-optimization', [
+    'reddit-ai-search-optimization-2026-the-definitive-playbook-to-earn-mentions-in-ai-answers-rank-in-google',
+    'answer-engine-optimization-for-reddit-in-2026',
+    'reddit-and-quora-distribution-system-for-ai-search-in-2026',
+  ]),
+  ...mergeInto('reddit-seo', [
+    'reddit-ai-seo-strategies-for-2026',
+    'reddit-seo-strategies-for-ranking-threads-in-google-and-ai-answers',
+    'reddit-marketing-vs-seo-for-ai-recommendations',
+    'reddit-seo-intelligence-for-saas-evaluate-subreddits-and-threads',
+  ]),
+  ...mergeInto('how-to-get-chatgpt-to-mention-your-brand-via-reddit-marketing', [
+    'why-chatgpt-recommends-your-competitors',
+    'why-brand-mentions-matter-for-ai-search-optimization',
+  ]),
+  ...mergeInto('generative-engine-optimization-for-brands', [
+    'stop-vague-ai-visibility-advice-with-a-2026-ai-search-test-checklist',
+    'ai-seo-case-study-more-ai-citations-and-qualified-leads-in-60-days',
+  ]),
+  ...mergeInto('reddit-marketing-for-saas', [
+    'reddit-marketing-in-2026-for-saas-founders',
+    'b2b-reddit-marketing-playbook-for-pipeline-without-brand-account-blowback',
+    'nobody-cares-about-your-startup-reddit-positioning-that-converts',
+  ]),
+  ...mergeInto('reddit-marketing-for-ecommerce', [
+    'how-to-market-your-ecommerce-brand-with-reddit',
+    'reddit-strategies-for-7-9-figure-ecommerce-brands',
+  ]),
+  ...mergeInto('reddit-lead-generation', [
+    'how-to-find-customers-on-reddit-for-saas-and-ecommerce',
+    'reddit-lead-generation-playbook-for-saas-ecommerce-2026',
+    'reddit-comment-to-lead-funnel-for-saas-founders-2026',
+    'steal-competitors-angry-customers-on-reddit-no-spam-2026',
+    'scared-of-cold-calling-use-reddit-as-warm-outbound-in-2026',
+    'first-3-clients-with-0-in-2026-using-direct-outreach',
+    'first-paying-customer-fast-in-2026-with-a-reddit-launch-checklist',
+    'first-customer-on-reddit-in-2026-offer-and-post-playbook',
+    '1-paying-customer-from-the-wild-to-10-with-reddit-in-2026',
+    'solo-saas-launch-in-2026-with-reddit-demand-validation',
+    'linkedin-not-converting-in-2026-validate-demand-with-reddit-ai-search',
+    'grow-saas-without-ads-in-2026-using-reddit-and-ai-search',
+  ]),
+  ...mergeInto('reddit-marketing-case-studies', [
+    'reddit-marketing-case-studies-7-campaign-breakdowns',
+    'reddit-marketing-case-studies-2026',
   ]),
 ];
