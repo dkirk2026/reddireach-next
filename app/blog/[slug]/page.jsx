@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { sanityFetch, getRelatedPosts, formatDate } from '@/lib/sanity';
-import { postTitleTag } from '@/lib/seo';
+import { postTitleTag, postDescription } from '@/lib/seo';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import RelatedPosts from '@/components/RelatedPosts';
@@ -15,6 +15,7 @@ const CAL = 'https://calendly.com/kirkco/chat';
 const SINGLE_POST_QUERY = `*[${publishedPostFilter} && slug.current == $slug][0]{
   title,
   seoTitle,
+  metaDescription,
   "slug": slug.current,
   excerpt,
   publishedAt,
@@ -38,13 +39,13 @@ export async function generateMetadata({ params }) {
   const ogImage = post?.img ? `${post.img}?w=1200&h=630&fit=crop&auto=format` : 'https://www.reddireach.com/icon.png';
   return {
     title: post ? postTitleTag(post) : 'ReddiReach Blog',
-    description: post?.excerpt || '',
+    description: post ? postDescription(post) : '',
     alternates: { canonical: url },
     openGraph: {
       type: 'article',
       url,
       title: post?.title,
-      description: post?.excerpt || '',
+      description: post ? postDescription(post) : '',
       images: [{ url: ogImage, width: 1200, height: 630 }],
       publishedTime: post?.publishedAt,
     },
