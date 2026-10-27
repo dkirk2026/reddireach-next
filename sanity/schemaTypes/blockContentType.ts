@@ -1,5 +1,5 @@
 import {defineType, defineArrayMember} from 'sanity'
-import {ImageIcon} from '@sanity/icons'
+import {ImageIcon, ThListIcon} from '@sanity/icons'
 
 /**
  * This is the schema type for block content used in the post document type
@@ -71,6 +71,39 @@ export const blockContentType = defineType({
           title: 'Alternative Text',
         }
       ]
+    }),
+    // Article tables, rendered by components/BlogTable.jsx. Same shape as the stored blocks:
+    // {caption?, columns: string[], rows: [{_type: 'row', cells: string[]}]}
+    defineArrayMember({
+      name: 'table',
+      title: 'Table',
+      type: 'object',
+      icon: ThListIcon,
+      fields: [
+        {name: 'caption', title: 'Caption', type: 'string'},
+        {name: 'columns', title: 'Column headings', type: 'array', of: [{type: 'string'}]},
+        {
+          name: 'rows',
+          title: 'Rows',
+          type: 'array',
+          of: [
+            {
+              name: 'row',
+              title: 'Row',
+              type: 'object',
+              fields: [{name: 'cells', title: 'Cells', type: 'array', of: [{type: 'string'}]}],
+              preview: {
+                select: {cells: 'cells'},
+                prepare: ({cells}) => ({title: (cells || []).join(' | ')}),
+              },
+            },
+          ],
+        },
+      ],
+      preview: {
+        select: {caption: 'caption', columns: 'columns'},
+        prepare: ({caption, columns}) => ({title: caption || (columns || []).join(' | '), subtitle: 'Table'}),
+      },
     }),
   ],
 })
