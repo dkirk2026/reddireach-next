@@ -1,5 +1,7 @@
 import { sanityFetch } from '@/lib/sanity';
 import { publishedPostFilter } from '@/data/blog-migration.mjs';
+import { authors } from '@/data/authors';
+import { authorPath } from '@/lib/authors';
 
 const SITE = 'https://www.reddireach.com';
 
@@ -12,6 +14,7 @@ export default async function sitemap() {
     '', '/about', '/pricing', '/checklist', '/tools/reddit-shadowban-checker',
     '/services/geo', '/services/seo', '/services/reddit', '/services/link-building', '/services/advertising',
     '/privacy', '/terms', '/cookies', '/blog',
+    ...authors.map(authorPath),
   ].map((path) => ({ url: `${SITE}${path}`, lastModified: new Date() }));
 
   let posts = [];

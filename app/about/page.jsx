@@ -3,6 +3,8 @@ import Footer from '@/components/Footer';
 import Fav from '@/components/Fav';
 import FaqAccordion from '@/components/FaqAccordion';
 import { pageMetadata, faqPageSchema } from '@/lib/seo';
+import { authors } from '@/data/authors';
+import { authorPathForName } from '@/lib/authors';
 
 export const metadata = pageMetadata({
   path: '/about',
@@ -203,12 +205,13 @@ export default function AboutPage() {
                 <div key={m.name} className="team-card">
                   <img className="tm-photo" src={m.img} alt={m.name} loading="lazy" />
                   <div className="tm-name-row">
-                    <span className="tm-name">{m.name}</span>
+                    <a className="tm-name" href={authorPathForName(m.name, authors)}>{m.name}</a>
                     <a className="tm-li" href={m.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${m.name} on LinkedIn`}>
                       <Fav domain="linkedin.com" className="fav-sm" />
                     </a>
                   </div>
                   <p className="tm-bio">{m.bio}</p>
+                  <a className="tm-more" href={authorPathForName(m.name, authors)}>Read {m.name.split(' ')[0]}&rsquo;s profile &rarr;</a>
                 </div>
               ))}
             </div>

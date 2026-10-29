@@ -6,6 +6,8 @@ import Footer from '@/components/Footer';
 import RelatedPosts from '@/components/RelatedPosts';
 import BlogBody from '@/components/BlogBody';
 import { publishedPostFilter } from '@/data/blog-migration.mjs';
+import { authors } from '@/data/authors';
+import { authorPathForName } from '@/lib/authors';
 
 export const revalidate = 60;
 
@@ -64,6 +66,7 @@ export default async function BlogPost({ params }) {
 
   // Related posts sharing at least one category, topped up with recent posts.
   const related = await getRelatedPosts(params.slug, post.cats, 3);
+  const authorHref = authorPathForName(post.author, authors);
 
   const postUrl = `https://www.reddireach.com/blog/${params.slug}`;
   const articleSchema = {
@@ -76,7 +79,9 @@ export default async function BlogPost({ params }) {
     datePublished: post.publishedAt,
     dateModified: post.contentUpdatedAt || post.publishedAt,
     image: post.img ? `${post.img}?w=1200&h=630&fit=crop&auto=format` : undefined,
-    author: post.author ? { '@type': 'Person', name: post.author } : undefined,
+    author: post.author
+      ? { '@type': 'Person', name: post.author, url: authorHref ? `https://www.reddireach.com${authorHref}` : undefined }
+      : undefined,
     publisher: { '@type': 'Organization', name: 'ReddiReach', logo: { '@type': 'ImageObject', url: 'https://www.reddireach.com/icon.png' } },
   };
 
@@ -102,7 +107,8 @@ export default async function BlogPost({ params }) {
           <h1 className="post-title">{post.title}</h1>
           {post.excerpt && <p className="post-lead">{post.excerpt}</p>}
           <div className="post-byline">
-            {post.author && <span>{post.author}</span>}
+            {post.author && authorHref && <a href={authorHref}>{post.author}</a>}
+            {post.author && !authorHref && <span>{post.author}</span>}
             <span>{formatDate(post.publishedAt)}</span>
             {post.contentUpdatedAt && <span>Updated {formatDate(post.contentUpdatedAt)}</span>}
           </div>

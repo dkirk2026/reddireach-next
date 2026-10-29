@@ -1291,3 +1291,95 @@ a.hero-badge:hover { border-color: var(--border-2); box-shadow: 0 2px 8px rgba(1
 
 @media (max-width: 520px) { .sb-note { grid-template-columns: 1fr; gap: 2px; } }
 @media (prefers-reduced-motion: reduce) { .sb-result { animation: none; } }
+
+/* ==========================================================================
+   /authors/[slug] author profile pages (reuse .ab-stat, .cell, .src, .eyebrow)
+   ========================================================================== */
+.au-hero { overflow: clip; }
+.au-hero-in { position: relative; display: grid; grid-template-columns: 340px 1fr; gap: 56px; align-items: center; padding-bottom: 40px; }
+.au-photo-card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 12px; box-shadow: 0 24px 50px rgba(13,13,13,0.10), 0 2px 6px rgba(13,13,13,0.05); }
+.au-photo { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px; }
+.au-hero-text .post-back { display: flex; width: fit-content; }
+.au-name { margin: 16px 0 6px; font-size: clamp(38px, 5.4vw, 60px); text-wrap: balance; }
+.au-other-role { font-family: var(--mono); font-size: 13px; letter-spacing: 0.04em; color: var(--brand-dk); }
+.au-lead { margin: 18px 0 24px; max-width: 620px; text-wrap: pretty; }
+.au-profiles { display: flex; flex-wrap: wrap; gap: 8px; }
+.au-profile { font-size: 13px; color: var(--text); background: var(--card); padding: 7px 13px 7px 9px; transition: border-color .14s, background .14s; }
+.au-profile:hover { border-color: var(--muted); background: var(--surface); }
+.au-stats-pad { padding-top: 0; padding-bottom: 72px; position: relative; }
+.au-stats { margin-top: 0; justify-content: flex-start; }
+.au-stats .ab-stat { flex: 1 1 0; }
+
+.au-story-grid { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 56px; align-items: start; }
+.au-h2 { margin: 18px 0 22px; text-wrap: balance; }
+.au-story p { color: var(--muted); font-size: 17px; line-height: 1.7; margin-bottom: 18px; text-wrap: pretty; }
+.au-story p:first-of-type { color: var(--text); font-size: 19px; }
+.au-career { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px 22px; box-shadow: 0 10px 26px rgba(13,13,13,0.05); position: sticky; top: 96px; }
+.au-rows { list-style: none; margin-top: 18px; display: flex; flex-direction: column; }
+.au-row { display: flex; align-items: center; gap: 12px; padding: 13px 8px; border-top: 1px solid var(--border); border-radius: 8px; }
+.au-rows li:first-child .au-row { border-top: none; }
+.au-row-link { transition: background .14s; }
+.au-row-link:hover { background: var(--surface); }
+.au-logo { width: 32px; height: 32px; border-radius: 8px; object-fit: contain; border: 1px solid var(--border); background: #fff; flex-shrink: 0; }
+.au-logo-icon { display: grid; place-items: center; color: var(--brand-dk); background: var(--brand-bg); border-color: rgba(255,69,0,0.25); }
+.au-row-text { display: flex; flex-direction: column; min-width: 0; }
+.au-row-org { font-size: 14.5px; font-weight: 600; color: var(--text); }
+.au-row-role { font-size: 13px; color: var(--muted); line-height: 1.4; }
+.au-row-period { margin-left: auto; font-family: var(--mono); font-size: 11.5px; color: var(--faint); white-space: nowrap; padding-left: 8px; }
+
+.au-videos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
+.au-video { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: 0 8px 22px rgba(13,13,13,0.04); display: flex; flex-direction: column; }
+.au-video-frame { position: relative; aspect-ratio: 16 / 9; background: #0d0d0d; }
+.au-video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.au-video-cap { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 4px 9px; padding: 16px 18px 18px; }
+.au-video-show { font-size: 13px; font-weight: 600; color: var(--text); }
+.au-video-date { font-family: var(--mono); font-size: 11.5px; color: var(--faint); white-space: nowrap; }
+.au-video-title { grid-column: 1 / -1; margin-top: 6px; font-size: 16px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.35; color: var(--text); text-wrap: balance; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.7em; }
+.au-logo-sm { width: 18px; height: 18px; border-radius: 5px; object-fit: contain; flex-shrink: 0; }
+
+.au-feats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+.au-feat { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px 18px 16px; display: flex; flex-direction: column; gap: 10px; box-shadow: 0 8px 22px rgba(13,13,13,0.04); transition: transform .14s, box-shadow .14s; }
+.au-feat:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(13,13,13,0.09); }
+.au-feat-head { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.au-feat-outlet { font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.au-feat-kind { margin-left: auto; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-dk); background: var(--brand-bg); border: 1px solid rgba(255,69,0,0.25); border-radius: 999px; padding: 3px 8px; white-space: nowrap; }
+.au-feat-title { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.35; color: var(--text); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.7em; }
+.au-feat-date { margin-top: auto; font-family: var(--mono); font-size: 11.5px; color: var(--faint); }
+
+.au-others { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+.au-other { display: flex; align-items: center; gap: 14px; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 14px 18px 14px 14px; box-shadow: 0 8px 22px rgba(13,13,13,0.04); transition: border-color .14s, transform .14s; }
+.au-other:hover { border-color: var(--muted); transform: translateY(-2px); }
+.au-other-photo { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); flex-shrink: 0; }
+.au-other-arrow { margin-left: auto; color: var(--brand); font-size: 18px; }
+
+.post-byline a { color: var(--brand-dk); text-decoration: underline; text-underline-offset: 2px; }
+.post-byline a:hover { color: var(--brand); }
+.tm-name a:hover { color: var(--brand-dk); }
+.tm-more { font-size: 13.5px; font-weight: 600; color: var(--brand-dk); padding: 0 4px 6px; }
+.tm-more:hover { color: var(--brand); }
+
+/* Click-to-play poster (components/VideoEmbed.jsx) */
+.au-play { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; cursor: pointer; background: #0d0d0d; display: block; }
+.au-play img { width: 100%; height: 100%; object-fit: cover; opacity: 0.92; transition: opacity .16s, transform .3s; }
+.au-play:hover img { opacity: 1; transform: scale(1.02); }
+.au-play-btn { position: absolute; left: 50%; top: 50%; width: 60px; height: 60px; margin: -30px 0 0 -30px; border-radius: 50%; background: var(--brand); color: #fff; display: grid; place-items: center; box-shadow: 0 10px 26px rgba(255,69,0,0.35); transition: transform .16s, background .16s; }
+.au-play:hover .au-play-btn { transform: scale(1.08); background: var(--brand-dk); }
+.au-play:focus-visible { outline: 3px solid var(--brand); outline-offset: -3px; }
+
+/* Balanced wraps on the author pages, so no heading or label ends on one word */
+.au-page .h2, .au-page .ab-lbl, .au-page .cell p, .au-page .au-row-role, .au-page .au-feat-title { text-wrap: balance; }
+
+@media (max-width: 1020px) {
+  .au-feats, .au-videos { grid-template-columns: repeat(2, 1fr); }
+  .au-story-grid { grid-template-columns: 1fr; }
+  .au-career { position: static; }
+}
+@media (max-width: 860px) {
+  .au-hero-in { grid-template-columns: 1fr; gap: 32px; }
+  .au-photo-card { max-width: 300px; }
+  .au-videos, .au-others { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .au-feats { grid-template-columns: 1fr; }
+  .au-stats .ab-stat { flex: 1 1 100%; }
+}
