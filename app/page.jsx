@@ -3,11 +3,9 @@ import { homeFaqs } from '@/data/faqs';
 
 export const metadata = pageMetadata({
   path: '/',
-  title: 'Reddit Marketing Agency · ReddiReach',
+  title: 'ReddiReach: Reddit Marketing Agency for AI Search',
   description:
-    'ReddiReach is a Reddit marketing agency that gets brands cited and recommended by ChatGPT, Perplexity, Gemini and Google AI.',
-  ogDescription:
-    'ReddiReach is a Reddit marketing agency that gets brands cited and recommended by ChatGPT, Perplexity, Gemini and Google AI.',
+    'Get your brand into the Reddit threads ChatGPT, Perplexity and Google AI quote. Human-written posts, live-link reporting, plans from $2,000 a month.',
 });
 
 // The homepage renders the same 7 FAQs as the <Faq /> accordion, so it gets the
@@ -28,6 +26,7 @@ import WhyUs from '@/components/WhyUs';
 import Stats from '@/components/Stats';
 import Faq from '@/components/Faq';
 import Cta from '@/components/Cta';
+import PartnerBand from '@/components/PartnerBand';
 import Footer from '@/components/Footer';
 
 export default function HomePage() {
@@ -38,6 +37,7 @@ export default function HomePage() {
       <div className="frame">
         <HeroSplit />
         <Logos />
+        <PartnerBand />
         <SearchShift />
         <Conversations />
         <section className="sect dots vis-sect" id="visibility">

@@ -46,9 +46,9 @@ export default function HeroShowcase({ inline = false }) {
           { t: 'Based on discussions across Reddit, here are some top picks:\n\n' },
           { t: '1. ' },
           { t: 'YourBrand', cls: 'sc-brand' },
-          { t: ': Highly recommended on r/smallbusiness for project management and customer outreach. Users report a ' },
-          { t: '340% increase', cls: 'sc-strong' },
-          { t: ' in productivity.\n\n' },
+          { t: ': Highly recommended on r/smallbusiness for project management and customer outreach. Users call it ' },
+          { t: 'the easiest all-in-one tool', cls: 'sc-strong' },
+          { t: ' for small teams.\n\n' },
           { t: '2. Notion: Great for docs and wikis, but less focused on outreach.\n\n' },
           { t: '3. HubSpot: Solid CRM, though pricier for small teams.\n\n' },
           { t: "I'd start with " },
@@ -215,7 +215,7 @@ export default function HeroShowcase({ inline = false }) {
         {/* floating traffic badge */}
         <div className="sc-badge">
           <span className="sc-bars"><i></i><i></i><i></i><i></i></span>
-          <span className="sc-badge-txt"><b>+340%</b><span>traffic increase</span></span>
+          <span className="sc-badge-txt"><b>Example</b><span>AI answer preview</span></span>
         </div>
       </div>
 

@@ -1383,3 +1383,31 @@ a.hero-badge:hover { border-color: var(--border-2); box-shadow: 0 2px 8px rgba(1
   .au-feats { grid-template-columns: 1fr; }
   .au-stats .ab-stat { flex: 1 1 100%; }
 }
+
+/* Pricing: Reddit Ads horizontal card under the plan cards (reuses .pr-name/.pr-desc/.pr-amount) */
+.pr-ads { margin-top: 20px; display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; gap: 22px; align-items: center; background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 24px 26px; box-shadow: 0 10px 26px rgba(13,13,13,0.05); }
+.pr-ads-logo { width: 44px; height: 44px; border-radius: 12px; }
+.pr-ads-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.pr-ads-tag { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-dk); background: var(--brand-bg); border: 1px solid rgba(255,69,0,0.25); border-radius: 999px; padding: 3px 9px; }
+.pr-ads .pr-desc { margin: 6px 0 0; min-height: 0; max-width: 560px; text-wrap: pretty; }
+.pr-ads .pr-desc a { color: var(--brand-dk); font-weight: 500; text-decoration: underline; text-underline-offset: 2px; }
+.pr-ads-price { display: flex; align-items: baseline; gap: 5px; white-space: nowrap; }
+.pr-ads-from { font-size: 14px; color: var(--muted); font-weight: 500; }
+.pr-ads-cta { white-space: nowrap; }
+@media (max-width: 940px) {
+  .pr-ads { grid-template-columns: auto 1fr; max-width: 460px; margin-left: auto; margin-right: auto; }
+  .pr-ads-price, .pr-ads-cta { grid-column: 1 / -1; }
+  .pr-ads-cta { justify-content: center; }
+}
+
+/* Reusable Reddit Partner band (components/PartnerBand.jsx) */
+.partner-chip { display: inline-flex; align-items: center; gap: 9px; background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px 6px 7px; font-size: 13px; font-weight: 600; color: var(--text); box-shadow: 0 1px 2px rgba(13,13,13,0.04); }
+.partner-chip img { width: 22px; height: 22px; border-radius: 50%; }
+#reddit-partner .h2 { text-wrap: balance; }
+#reddit-partner .cell p { text-wrap: pretty; }
+
+/* Named client logos under "Join the 500+ companies" */
+.client-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 18px 48px; margin: 26px auto 6px; }
+.client-logos img { width: auto; display: block; opacity: 0.85; transition: opacity .15s; }
+.client-logos img:hover { opacity: 1; }
+.hero-split .display { font-size: clamp(36px, 4.6vw, 56px); text-wrap: balance; }

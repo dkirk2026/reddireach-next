@@ -9,9 +9,9 @@ export default function HeroSplit() {
         <div className="hero-split">
           {/* LEFT: copy */}
           <div className="hero-copy">
-            <span className="hero-badge"><Fav domain="reddit.com" />Reddit is the <b>#1 source</b> LLMs use to answer questions</span>
-            <h1 className="display">Become the answer<br />AI <span className="u">recommends</span>.</h1>
-            <p className="lead">ReddiReach is the leading Reddit marketing agency for AI search optimization (GEO). When someone asks ChatGPT, Perplexity or Google AI for a recommendation in your category, we make sure they mention your brand.</p>
+            <a className="hero-badge" href="#reddit-partner"><Fav domain="reddit.com" /><span>Official <b>Reddit Partner</b> agency</span></a>
+            <h1 className="display">The Reddit marketing agency that gets AI to <span className="u">recommend</span> you.</h1>
+            <p className="lead">ReddiReach is a Reddit marketing agency for AI search optimization (GEO). When someone asks ChatGPT, Perplexity or Google AI for a recommendation in your category, we make sure they mention your brand.</p>
             <div className="hero-cta">
               <a href="https://calendly.com/kirkco/chat" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book a call</a>
               <a href="#how" className="btn btn-ghost">Our approach to Reddit</a>

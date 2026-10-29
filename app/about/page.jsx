@@ -18,7 +18,7 @@ const PROPOSALS = 'https://filipelinsduarte.github.io/proposals';
 const team = [
   {
     name: 'Danny Kirk',
-    role: 'COO & Advisory',
+    role: 'Founder',
     img: `${PROPOSALS}/danny-kirk.jpeg`,
     linkedin: 'https://www.linkedin.com/in/danielpkirk/',
     bio: 'Leads Reddit and community strategy, living in the subreddits and making sure every post lands naturally, never as spam.',
@@ -121,7 +121,7 @@ export default function AboutPage() {
           <div className="pad hero-in" style={{ maxWidth: '840px' }}>
             <span className="eyebrow" style={{ justifyContent: 'center' }}>About us</span>
             <h1 className="display" style={{ margin: '22px 0 20px' }}>
-              The team making brands the answer <span className="u" style={{ color: 'var(--brand)' }}>AI recommends</span>.
+              The team helping brands get <span className="u" style={{ color: 'var(--brand)' }}>recommended by AI</span>.
             </h1>
             <p className="lead" style={{ maxWidth: '680px', margin: '0 auto' }}>
               ReddiReach is a Reddit marketing and AI search optimization agency. For 8+ years, since 2018, we have helped brands, startups and enterprises get recommended in the Reddit conversations and AI answers their buyers actually trust.

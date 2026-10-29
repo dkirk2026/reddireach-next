@@ -1,13 +1,15 @@
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import FaqAccordion from '@/components/FaqAccordion';
+import Logos from '@/components/Logos';
+import PartnerBand from '@/components/PartnerBand';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata = pageMetadata({
   path: '/pricing',
-  title: 'Pricing · Reddit Marketing & AI Search Optimization (GEO) · ReddiReach',
+  title: 'Reddit Marketing Pricing: Plans from $2,000 a Month',
   description:
-    'Simple, transparent pricing for Reddit marketing and Generative Engine Optimization (GEO). Plans from $1,600/month to get your brand recommended by ChatGPT, Perplexity, Gemini and Google AI.',
+    'Reddit marketing plans from $2,000 a month and AI search optimization at $5,000 a month, plus Reddit Ads for budgets from $1,500 a month.',
 });
 
 const CAL = 'https://calendly.com/kirkco/chat';
@@ -30,11 +32,15 @@ const plans = [
     desc: 'Validate Reddit as a channel with 30 authentic contributions a month.',
     cta: 'Get started', href: CAL,
     features: [
-      { text: '2 strategic discussions per month built around real buying questions', brands: [B.reddit] },
-      { text: '8 community comments from non-branded accounts in comparison threads', brands: [B.reddit] },
-      { text: '20 brand-profile comments from the brand profile we create and manage', brands: [B.reddit] },
+      { text: 'Reddit strategy and target subreddits at kickoff', brands: [B.reddit] },
+      { text: '30 contributions a month: posts and comments', brands: [B.reddit] },
+      { text: 'Branded Reddit profile, set up and managed', brands: [B.reddit] },
       { text: 'Every contribution logged with its live link' },
-      { text: 'Monthly review so progress is visible throughout' },
+      { text: 'Weekly report, approved before posting' },
+      { text: 'Reddit listening platform' },
+      { text: 'Audience mapping: where your buyers talk' },
+      { text: 'Monthly insights on trends and pain points' },
+      { text: 'Monthly review' },
     ],
   },
   {
@@ -42,11 +48,15 @@ const plans = [
     desc: 'Perfect for businesses that want to show up in AI search results.',
     cta: 'Start growing', href: CAL,
     features: [
-      { text: '12 articles/month targeting high-intent queries' },
-      { text: 'Technical SEO: schema, metadata and title optimization across all pages', brands: [B.gsc] },
-      { text: 'AI visibility tracked across ChatGPT, Gemini, Perplexity, Google AI Mode and AIO', brands: [B.chatgpt, B.gemini, B.perplexity, B.google] },
-      { text: 'Link building from high-authority, relevant sites' },
-      { text: 'Weekly strategy and alignment calls' },
+      { text: 'Everything in Reddit Growth', brands: [B.reddit] },
+      { text: '30-day content plan with keywords and intent' },
+      { text: 'Technical SEO and AI-readiness audit, plus fixes', brands: [B.gsc] },
+      { text: '8 fact-checked articles a month in your voice' },
+      { text: 'AI visibility and AI crawler tracking', brands: [B.chatgpt, B.gemini, B.perplexity, B.google] },
+      { text: 'Link building and off-page support (placement fees extra)' },
+      { text: 'Messaging and positioning consulting' },
+      { text: 'Dedicated Slack channel' },
+      { text: 'Bi-weekly strategy calls' },
     ],
   },
   {
@@ -69,7 +79,7 @@ const plans = [
 const includes = [
   { title: 'Expert-led engagement', body: 'Our team writes every comment and post. No bots, no spam, ever.' },
   { title: 'A senior team on every account', body: 'The people who plan your strategy do the work. No junior hand-offs.' },
-  { title: 'AI citation tracking', body: 'We monitor your mentions across ChatGPT, Perplexity, Gemini and Google AI.' },
+  { title: 'An AI Peekaboo subscription', body: 'Our AI visibility software shows how AI answers mention you and the impact of our Reddit work.' },
   { title: 'Transparent monthly reporting', body: 'Clear reporting on reach, engagement and the AI recommendations you are winning.' },
 ];
 
@@ -110,7 +120,7 @@ const offerSchema = {
       item: {
         '@type': 'Offer',
         name: 'Reddit Growth',
-        description: 'Validate Reddit as a channel with 30 authentic contributions a month: 2 strategic discussions, 8 community comments and 20 brand-profile comments, each logged with its live link.',
+        description: 'A Reddit strategy at kickoff and 30 contributions a month (2 discussions plus comments in high-intent and comparison threads), each logged with its live link, with weekly reports, audience mapping and monthly insights.',
         price: '2000',
         priceCurrency: 'USD',
         priceSpecification: { '@type': 'UnitPriceSpecification', price: '2000', priceCurrency: 'USD', unitText: 'MONTH' },
@@ -124,7 +134,7 @@ const offerSchema = {
       item: {
         '@type': 'Offer',
         name: 'AI Search Optimization',
-        description: '12 articles/month, technical SEO, AI visibility tracking across ChatGPT, Gemini, Perplexity and Google AI, link building, and weekly strategy calls.',
+        description: 'Everything in Reddit Growth, plus a monthly content plan, a technical SEO and AI-readiness audit, 8 articles a month, AI visibility tracking, link building support, positioning consulting, a dedicated Slack channel and bi-weekly strategy calls.',
         price: '5000',
         priceCurrency: 'USD',
         priceSpecification: { '@type': 'UnitPriceSpecification', price: '5000', priceCurrency: 'USD', unitText: 'MONTH' },
@@ -206,6 +216,24 @@ export default function PricingPage() {
               ))}
             </div>
 
+            {/* Reddit Ads add-on: one horizontal card under the plans */}
+            <div className="pr-ads">
+              <img className="pr-ads-logo" src="/clients/reddit.png" alt="" width="44" height="44" />
+              <div className="pr-ads-copy">
+                <div className="pr-ads-top">
+                  <span className="pr-name">Reddit Ads management</span>
+                  <span className="pr-ads-tag">Reddit Partner</span>
+                </div>
+                <p className="pr-desc">Paid campaigns run by an official Reddit Partner agency: targeting, creative and conversion tracking, managed for you, for ad budgets starting at $1,500 a month. See how our <a href="/services/advertising">Reddit ads agency</a> works.</p>
+              </div>
+              <div className="pr-ads-price">
+                <span className="pr-ads-from">From</span>
+                <span className="pr-amount">$1,500</span>
+                <span className="pr-period">/mo ad spend</span>
+              </div>
+              <a href={CAL} target="_blank" rel="noopener noreferrer" className="btn btn-ghost pr-ads-cta">Talk about Reddit Ads</a>
+            </div>
+
             {/* Context: every plan includes */}
             <div className="pr-includes">
               <div className="pr-inc-head">Every plan includes</div>
@@ -220,6 +248,10 @@ export default function PricingPage() {
             </div>
           </div>
         </section>
+
+        <Logos />
+
+        <PartnerBand />
 
         {/* Context: how pricing works */}
         <section className="sect">

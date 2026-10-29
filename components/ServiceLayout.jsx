@@ -5,6 +5,7 @@ import Tools from '@/components/Tools';
 import Fav from '@/components/Fav';
 import FaqAccordion from '@/components/FaqAccordion';
 import HeroChecker from '@/components/HeroChecker';
+import PartnerBand from '@/components/PartnerBand';
 
 const CAL = 'https://calendly.com/kirkco/chat';
 const s2 = (d) => `https://www.google.com/s2/favicons?domain=${d}&sz=64`;
@@ -102,7 +103,7 @@ export default function ServiceLayout(props) {
               <div className="svc-split">
                 <div className="svc-split-copy">
                   {badge && (
-                    <a className="hero-badge" href={badge.href} target="_blank" rel="noopener noreferrer">
+                    <a className="hero-badge" href={badge.href} {...(badge.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
                       <Fav domain={badge.domain} /><span dangerouslySetInnerHTML={{ __html: badge.html }}></span>
                     </a>
                   )}
@@ -131,7 +132,7 @@ export default function ServiceLayout(props) {
           ) : (
             <div className="pad hero-in" style={{ maxWidth: '900px' }}>
               {badge && (
-                <a className="hero-badge" href={badge.href} target="_blank" rel="noopener noreferrer">
+                <a className="hero-badge" href={badge.href} {...(badge.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
                   <Fav domain={badge.domain} /><span dangerouslySetInnerHTML={{ __html: badge.html }}></span>
                 </a>
               )}
@@ -309,6 +310,8 @@ export default function ServiceLayout(props) {
 
         {/* Tools we use (reused from the homepage) */}
         <Tools />
+
+        <PartnerBand />
 
         {/* FAQ */}
         {faqs.length > 0 && (

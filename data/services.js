@@ -4,11 +4,11 @@
 
 export const geo = {
   meta: {
-    title: 'GEO & AI Search Optimization · ReddiReach',
+    title: 'GEO Agency: Get Recommended by ChatGPT and AI Search',
     description: 'Get your brand cited and recommended by ChatGPT, Perplexity, Gemini and Google AI Overviews with ReddiReach Generative Engine Optimization (GEO).',
   },
   eyebrow: 'GEO · AI Search Optimization',
-  badge: { domain: 'chatgpt.com', html: 'ChatGPT is used by <b>800M+ people</b> every week', href: 'https://chatgpt.com' },
+  badge: { domain: 'chatgpt.com', html: 'ChatGPT has <b>900M+ weekly users</b> (OpenAI, Feb 2026)', href: 'https://searchengineland.com/chatgpt-900-million-weekly-active-users-470492' },
   title: 'Become the brand AI recommends.',
   highlight: 'AI recommends',
   lead: 'When someone asks ChatGPT, Perplexity, Gemini or Google AI for a recommendation in your category, Generative Engine Optimization (GEO) makes sure your brand is the answer, cited by name, built on the same SEO foundations that rank you on Google.',
@@ -36,11 +36,11 @@ export const geo = {
     title: 'See where your brand stands in AI search.',
     body: 'Book a free call. We will show you the AI prompts your buyers use and exactly where you show up today.',
   },
-  whyTitle: 'Why GEO matters now',
+  whyTitle: 'What the AI Search plan includes',
   why: [
-    { k: '79%', v: 'of consumers now use AI for product research' },
-    { k: '#1', v: 'Reddit is the top source AI models cite' },
-    { k: '3x', v: 'higher conversion from AI referrals vs traditional search' },
+    { k: '8', v: 'articles a month in your brand voice, fact-checked against sources' },
+    { k: '5', v: 'AI engines tracked: ChatGPT, Gemini, Perplexity, AI Mode and AI Overviews' },
+    { k: 'Bi-weekly', v: 'strategy and alignment calls with the senior team' },
   ],
   faqs: [
     { q: 'What is Generative Engine Optimization (GEO)?', a: 'GEO is the practice of optimizing your brand to be cited and recommended by AI search engines like ChatGPT, Perplexity, Gemini and Google AI Overviews. Instead of ranking a page in a list of links, the goal is to become the answer the model actually gives.' },
@@ -57,11 +57,11 @@ export const geo = {
 
 export const seo = {
   meta: {
-    title: 'Reddit SEO that feeds AI search · ReddiReach',
+    title: 'SEO Agency: Rank on Google and Get Cited by AI',
     description: 'Modern SEO from ReddiReach: technical foundations, semantic content and structured data that rank on Google and feed the AI engines built on top of it.',
   },
   eyebrow: 'SEO · Search Engine Optimization',
-  badge: { domain: 'google.com', html: 'Google still powers around <b>90% of all web searches</b>', href: 'https://www.google.com' },
+  badge: { domain: 'reddit.com', html: 'Official <b>Reddit Partner</b> agency', href: '#reddit-partner' },
   title: 'SEO built to rank in Google and AI search.',
   highlight: 'AI search',
   lead: 'Search did not disappear, it split. We build Reddit-informed SEO, the technical and content foundations that rank on Google and feed the AI search optimization (GEO) answers built on top of them.',
@@ -89,11 +89,11 @@ export const seo = {
     title: 'See where your brand stands in search.',
     body: 'Book a free call. We will show you your technical gaps, ranking opportunities and how AI-ready your site is today.',
   },
-  whyTitle: 'Why SEO still wins',
+  whyTitle: 'How we run SEO',
   why: [
-    { k: '53%', v: 'of all website traffic comes from organic search' },
-    { k: '#1', v: 'organic is the highest-ROI channel for most brands' },
-    { k: '3x', v: 'AI Overviews pull from pages that already rank well' },
+    { k: '8', v: 'articles a month built around the queries your buyers search' },
+    { k: 'Every page', v: 'gets schema, metadata and title optimization' },
+    { k: '3 months', v: 'minimum, the time rankings need to compound' },
   ],
   faqs: [
     { q: 'Is SEO still worth it with AI search?', a: 'Yes, more than ever. AI Overviews and answer engines are built on the pages that already rank, so strong technical and content SEO is the foundation of AI visibility, not a replacement for it.' },
@@ -110,11 +110,11 @@ export const seo = {
 
 export const reddit = {
   meta: {
-    title: 'Reddit Marketing Agency · ReddiReach',
+    title: 'Reddit Marketing Services',
     description: 'Authentic Reddit marketing from ReddiReach: get your brand recommended in the high-intent threads your buyers and the AI models already read. No bots, no spam.',
   },
   eyebrow: 'Reddit Marketing Services',
-  badge: { domain: 'reddit.com', html: 'Reddit is the <b>#1 source</b> AI models cite for recommendations', href: 'https://www.reddit.com' },
+  badge: { domain: 'reddit.com', html: 'Official <b>Reddit Partner</b> agency', href: '#reddit-partner' },
   title: 'Get recommended in the Reddit threads buyers trust.',
   highlight: 'Reddit threads',
   lead: 'Reddit is the number one source AI models cite, and where your buyers go for honest recommendations. We get your brand mentioned there naturally, by real community members, reinforcing the authority signals AI trusts.',
@@ -142,14 +142,14 @@ export const reddit = {
     title: 'See where your brand stands on Reddit.',
     body: 'Book a free call. We will show you the subreddits, threads and competitors that matter, and where you are absent today.',
   },
-  whyTitle: 'Why Reddit drives AI',
+  whyTitle: 'What a month of Reddit Growth looks like',
   why: [
-    { k: '#1', v: 'Reddit is the top source AI models cite' },
-    { k: '3x', v: 'higher conversion from AI referrals vs traditional search' },
-    { k: '100%', v: 'authentic, human engagement, never bots' },
+    { k: '30', v: 'contributions a month, written by people, never bots' },
+    { k: 'Every', v: 'contribution logged with its live link' },
+    { k: '$2,000', v: 'a month, with a monthly review of progress' },
   ],
   faqs: [
-    { q: 'Is Reddit marketing worth it?', a: 'Yes, when it is done authentically. Reddit drives both direct discovery and AI recommendations, and AI referral traffic converts roughly 3x higher than traditional search.' },
+    { q: 'Is Reddit marketing worth it?', a: 'Yes, when it is done authentically. Reddit drives both direct discovery and AI recommendations, and the same threads that persuade buyers are the ones AI tools read when they recommend brands.' },
     { q: 'Do you use bots or fake accounts?', a: 'Never. Real Reddit natives write every comment and post. We respect each subreddit’s rules and moderators and only post truthful, genuinely helpful content.' },
     { q: 'How does Reddit affect AI search?', a: 'Reddit is the number one source AI models cite. When your brand is genuinely and positively discussed in the right communities, AI is far more likely to recommend it in its answers.' },
     { q: 'Which subreddits will you target?', a: 'The communities where your buyers ask for recommendations, ranked by buying intent and fit, plus the exact threads Google and AI engines already surface for your category.' },
@@ -167,7 +167,7 @@ export const reddit = {
     rightCap: '30 contributions a month, each logged with its live link',
     deliverables: [
       { n: '2', title: 'Strategic discussions', body: 'New threads built around real buying questions, from reviews to "is it any good?" posts.' },
-      { n: '8', title: 'Community comments', body: 'Helpful replies from non-branded accounts in threads where buyers compare options.' },
+      { n: '8', title: 'Community comments', body: 'Helpful, genuine replies in the threads where buyers compare options.' },
       { n: '20', title: 'Brand-profile comments', body: 'Customer support, product advice and honest answers from the brand profile we create and manage.' },
     ],
   },
@@ -179,11 +179,11 @@ export const reddit = {
 
 export const linkBuilding = {
   meta: {
-    title: 'Reddit Link Building · ReddiReach',
+    title: 'Link Building Agency: Editorial Links AI and Google Trust',
     description: 'Earn high-authority backlinks from the sites AI trusts. ReddiReach builds the credible link profile that turns into more citations and AI recommendations.',
   },
   eyebrow: 'Link Building',
-  badge: { domain: 'reddit.com', html: 'Reddit is one of the <b>most-cited domains</b> AI and Google trust', href: 'https://www.reddit.com' },
+  badge: { domain: 'reddit.com', html: 'Official <b>Reddit Partner</b> agency', href: '#reddit-partner' },
   title: 'Reddit link building that earns the authority AI trusts.',
   highlight: 'authority AI trusts',
   lead: 'AI models weight domain authority and citation history when deciding what to recommend. We earn the high-authority links that make your brand a credible, citable source, reinforcing the Reddit marketing and SEO work driving your AI visibility.',
@@ -211,11 +211,11 @@ export const linkBuilding = {
     title: "See where your brand's authority stands.",
     body: 'Book a free call. We will show you your link gaps versus competitors and the highest-value wins to go after first.',
   },
-  whyTitle: 'Why authority matters',
+  whyTitle: 'How we build links',
   why: [
-    { k: '#1', v: 'authority and citation history shape what AI recommends' },
-    { k: '90%+', v: 'of top-cited brands have years of editorial coverage' },
-    { k: '3x', v: 'more citations follow a credible link profile' },
+    { k: 'Relevant', v: 'links only from high-authority sites in your niche' },
+    { k: 'Editorial', v: 'placements earned with content, never bought link farms' },
+    { k: '3 months', v: 'minimum, the time new links need to show in search' },
   ],
   faqs: [
     { q: 'Why does link building matter for AI search?', a: 'AI models weight domain authority and citation history when deciding what to recommend. A credible, relevant link profile makes your brand a more trustworthy and citable source.' },
@@ -232,11 +232,11 @@ export const linkBuilding = {
 
 export const advertising = {
   meta: {
-    title: 'Reddit Advertising Agency · ReddiReach',
+    title: 'Reddit Ads Agency: Campaign Setup, Creative and Tracking',
     description: 'ReddiReach is a Reddit advertising agency running paid campaigns that put your brand in front of ready-to-buy communities, with targeting, creative and tracking built for how Reddit actually works.',
   },
   eyebrow: 'Reddit Advertising',
-  badge: { domain: 'reddit.com', html: 'Reddit Ads reach <b>100M+ daily active users</b>', href: 'https://www.reddit.com' },
+  badge: { domain: 'reddit.com', html: 'Official <b>Reddit Partner</b> agency', href: '#reddit-partner' },
   title: 'Reddit ads that reach ready-to-buy audiences.',
   highlight: 'ready-to-buy audiences',
   lead: 'Reddit Ads put your brand directly in front of the communities already discussing your category, with targeting and creative built to feel native, backed by the organic Reddit marketing and AI search optimization (GEO) work building your brand everywhere else.',
@@ -264,11 +264,11 @@ export const advertising = {
     title: 'See what Reddit Ads could do for your brand.',
     body: 'Book a free call. We will show you the subreddits and audiences worth targeting and what a campaign could realistically return.',
   },
-  whyTitle: 'Why Reddit Ads work',
+  whyTitle: 'How we run Reddit Ads',
   why: [
-    { k: '100M+', v: 'daily active users Reddit Ads can reach' },
-    { k: '3x', v: 'lower avg. CPC than many social ad platforms' },
-    { k: '#1', v: 'Reddit is the top source AI models cite for recommendations' },
+    { k: '$1,500', v: 'a month minimum ad spend to start' },
+    { k: 'Partner', v: 'support from Reddit when a campaign or account needs help' },
+    { k: 'Full-funnel', v: 'targeting, creative and conversion tracking set up for you' },
   ],
   faqs: [
     { q: 'How much does Reddit advertising cost?', a: 'Reddit Ads run on an auction, so cost depends on your goals, audience and competition in your category. We tailor budget recommendations to what you are trying to achieve on a free strategy call, and there is no fixed minimum spend to get started.' },

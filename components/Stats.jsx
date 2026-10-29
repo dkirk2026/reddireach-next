@@ -10,9 +10,9 @@ export default function Stats() {
         </div>
       </div>
       <div className="stats">
-        <div className="stat"><div className="big">79%</div><div className="lbl">Of consumers now use AI for product research</div></div>
-        <div className="stat"><div className="big">#1</div><div className="lbl"><Fav domain="reddit.com" className="fav-sm" />Reddit is the top source AI models cite</div></div>
-        <div className="stat"><div className="big">3x</div><div className="lbl">Higher conversion from AI referrals vs. traditional search</div></div>
+        <div className="stat"><div className="big">900M+</div><div className="lbl">Weekly ChatGPT users (OpenAI, Feb 2026)</div></div>
+        <div className="stat"><div className="big">30</div><div className="lbl"><Fav domain="reddit.com" className="fav-sm" />Reddit contributions a month on our Growth plan</div></div>
+        <div className="stat"><div className="big">$2,000</div><div className="lbl">A month to start, with every contribution logged</div></div>
       </div>
     </section>
   );

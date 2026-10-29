@@ -11,7 +11,7 @@ export const metadata = {
     template: '%s',
   },
   description:
-    'ReddiReach is the leading Reddit marketing and AI search optimization (GEO) agency. We get your brand cited and recommended by ChatGPT, Perplexity, Gemini and Google AI Overviews through authentic Reddit marketing.',
+    'ReddiReach is a Reddit marketing and AI search optimization (GEO) agency. We get your brand cited and recommended by ChatGPT, Perplexity, Gemini and Google AI Overviews through authentic Reddit marketing.',
   icons: { icon: `${SITE}/icon.png` },
   alternates: { canonical: SITE },
   openGraph: {
